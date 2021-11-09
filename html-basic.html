@@ -74,32 +74,65 @@
   <button type="submit">在新窗口打开搜索结果</button>
 </form>
 <hr>
-<p>个人信息调查表</p>
-<dl>
-  <dt>性别</dt>
-  <dd>
-    <label><input type="radio" name="gender" value="male"> 男</label>
-    <label><input type="radio" name="gender" value="female"> 女</label>
-  </dd>
-  <dt>年龄</dt>
-  <dd>
-    <select name="age">
-      <option hidden>请选择</option>
-      <optgroup label="少年">
-        <option value="1-9">1到9岁</option>
-        <option value="10-18">10到18岁</option>
-      </optgroup>
-      <optgroup label="青年">
-        <option value="19-25">19到25岁</option>
-        <option value="26-30">26到30岁</option>
-      </optgroup>
-      <optgroup label="壮年">
-        <option value="31-40">31到40岁</option>
-        <option value="41-60">41到60岁</option>
-      </optgroup>
-    </select>
-  </dd>
-</dl>
-<div id="#bottom"></div>
+<form>
+  <p>个人信息调查表</p>
+  <dl>
+    <dt>性别</dt>
+    <dd>
+      <label><input type="radio" name="gender" value="male"> 男</label>
+      <label><input type="radio" name="gender" value="female"> 女</label>
+    </dd>
+    <dt>年龄</dt>
+    <dd>
+      <select name="age">
+        <option hidden>请选择</option>
+        <optgroup label="少年">
+          <option value="1-9">1到9岁</option>
+          <option value="10-18">10到18岁</option>
+        </optgroup>
+        <optgroup label="青年">
+          <option value="19-25">19到25岁</option>
+          <option value="26-30">26到30岁</option>
+        </optgroup>
+        <optgroup label="壮年">
+          <option value="31-40">31到40岁</option>
+          <option value="41-60">41到60岁</option>
+        </optgroup>
+      </select>
+    </dd>
+    <dt>生日</dt>
+    <dd>
+      <input type="date" name="birthday">
+    </dd>
+    <dt>生辰</dt>
+    <dd>
+      <input type="time" name="birthtime">
+    </dd>
+    <dt>照片</dt>
+    <dd>
+      <label><input hidden type="file" name="photo" accept="image/* multiple ">点我上传照片，我比文件上传按钮好看</label>
+    </dd>
+    <dt>肤色</dt>
+    <dd>
+      <input type="color" name="skin" value="#000000">
+    </dd>
+    <dt>自我介绍</dt>
+    <dd>
+      <textarea name="introduction" rows="10" cols="30">&lt;/textarea></textarea>
+    </dd>
+    <fieldset disabled>
+      <legend>这里面的全都禁用了</legend>
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+    </fieldset>
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+  </dl>
+</form>
+<hr>
+<hr>
+<div id=" bottom"></div>
 
 </html>
