@@ -10,6 +10,11 @@
       color: red;
     }
 
+    /*获得焦点时为蓝色*/
+    [tabindex="1"]:focus {
+      color: blue;
+    }
+
     /* 鼠标悬浮时为红色*/
     [tabindex="1"]:hover {
       color: red;
@@ -20,52 +25,49 @@
       color: green;
     }
 
-    /*获得焦点时为蓝色*/
-    [tabindex="1"]:focus {
-      color: blue;
-    }
 
-    /*红色p标签下的span子元素,这个怎么精确选择*/
-    [class*="c"]>:first-child {
+
+    /* 红色 */
+    p.a.c>:first-child {
       color: red;
     }
 
-    span>:first-child {
+    p.a.c span span {
       color: green;
     }
 
-    span+span {
+    p.a.c span span:last-child {
       color: blue;
     }
 
     /*让已访问的链接为橙色（orange）*/
-    :visited {
+    div a:visited {
       color: orange;
     }
 
     /*让未访问的链接为粉色（pink）*/
-    :link:not([href^="tel"i]):not(:visited):not([href^="mailto:"i]) {
+    div a:link {
       color: pink;
     }
 
     /*让所有邮件的链接为蓝色*/
-    [href^="mailto:"i] {
+    div a[href^="mailto:"i] {
       color: blue;
     }
 
 
     /*播打电话的链接为黄色*/
-    [href^="tel"i] {
+    div a[href^="tel"i] {
       color: yellow;
     }
 
     /*下载pdf的链接字号为30px*/
-    [href$="pdf"i] {
+    div a[href$="pdf"i] {
       font-size: 30px;
     }
 
     /*让下面的4567元素为红色*/
-    [class="a"]>ul>:nth-child(-n + 7):nth-child(n + 4) {
+    div.a ul :nth-child(-n + 7):nth-child(n + 4) {
       color: red;
     }
 
@@ -75,21 +77,21 @@
 
 让35-50的元素为蓝色*/
 
-    p+p+p+ul>:nth-child(-n + 25) {
+    div.b ul :nth-child(-n + 25) {
       color: red;
     }
 
-    p+p+p+ul>:nth-child(n + 65) {
+    div.b ul :nth-child(n + 65) {
       color: green;
     }
 
-    p+p+p+ul>:nth-child(n + 35):nth-child(-n + 50) {
+    div.b ul :nth-child(n + 35):nth-child(-n + 50) {
       color: blue;
     }
 
     /*让所有的质/素数(prime)（2，3，5，7，11，13……）跟
 合数（4，6，8，9，10……）为不同的颜色*/
-    [class="prime"]>ul>:nth-child(2n) {
+    div.prime li:not(:nth-child(1)):not(:nth-child(2n+4)):not(:nth-child(3n+9)):not(:nth-child(5n+25)):not(:nth-child(7n+49)) {
       color: red;
     }
   </style>
