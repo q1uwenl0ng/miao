@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>oald-layout-block-html</title>
+  <style>
+    body>div,
+    body,
+    html {
+      height: 100%;
+    }
+
+    body>div {
+      font-size: 0;
+    }
+
+    body * {
+      font-size: 16px;
+    }
+
+    body>div {
+      min-width: 600px;
+    }
+
+    aside {
+      width: 200px;
+      background-color: red;
+      height: 100%;
+      display: inline-block;
+      overflow: scroll;
+      vertical-align: top;
+    }
+
+    aside.right1 {
+      background-color: blue;
+    }
+
+    aside.right2 {
+      background-color: yellow;
+    }
+
+    main {
+      display: inline-block;
+      width: calc(100% - 600px);
+      height: 100%;
+      background-color: green;
+      vertical-align: top;
+    }
+
+    main nav {
+      background-color: orange;
+      height: 200px;
+      width: 100%;
+    }
+
+    main div {
+      background-color: aqua;
+      height: calc(100% - 200px);
+      width: 100%;
+      overflow: scroll;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <aside class="left"></aside>
+    <main>
+      <nav></nav>
+      <div></div>
+    </main>
+    <aside class=right1></aside>
+    <aside class=right2></aside>
+  </div>
+
+
+</body>
+
+</html>
