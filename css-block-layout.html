@@ -21,9 +21,11 @@
     main {
       width: 600px;
       margin: auto;
+      padding: 0 0 0 0;
     }
 
-    ul {
+    #ul1,
+    #ul2 {
       list-style: none;
 
     }
@@ -33,7 +35,7 @@
       width: 180px;
       height: 40px;
       border: 3px solid black;
-      margin: 0 30px 15px -40px;
+      margin: 0 15px 15px -40px;
       box-sizing: border-box;
       text-align: center;
       line-height: 34px;
@@ -54,6 +56,8 @@
     #ul1 li:nth-child(4n+5) {
       margin-top: -220px;
     }
+
+
 
     #ul2 {
       overflow: hidden;
@@ -76,6 +80,50 @@
       width: 600px;
       margin: auto;
       background-color: rgb(238, 138, 238);
+    }
+
+    #ul3 {
+      font-size: 0;
+      xbackground-color: blue;
+      width: 600px;
+      margin: auto;
+      box-sizing: border-box;
+      padding: 0px;
+    }
+
+    #ul3 * {
+      font-size: 16px;
+      display: inline-block;
+    }
+
+    #ul3 li {
+      background-color: rgb(238, 138, 238);
+      box-sizing: border-box;
+      width: 180px;
+      height: 40px;
+      border: 3px solid black;
+      margin: 0px 30px 15px 0px;
+
+      text-align: center;
+      line-height: 34px;
+      vertical-align: top;
+    }
+
+
+
+    #ul3 li:nth-child(3n+1) {
+      margin-left: 0px;
+    }
+
+    #ul3 li:nth-child(3n+3) {
+      margin-right: 0px;
+    }
+
+
+
+
+    #ul3 li:hover {
+      background-color: orange;
     }
   </style>
 </head>
@@ -105,6 +153,20 @@
       <li>产品</li>
       <li>产品</li>
     </ul>
+    <ul id="ul3">
+      <li>第二种方法</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品产品产品产品产品产品产品产品</li>
+      <li>产品</li>
+      <li>产品</li>
+      <li>产品</li>
+    </ul>
     <ul id=ul2>
       <li>link</li>
       <li>link</li>
@@ -117,6 +179,7 @@
     <p>©版权所有</p>
     <p>本页所有布局均使用块元素</p>
   </footer>
+
 </body>
 
 </html>
