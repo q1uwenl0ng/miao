@@ -5,35 +5,28 @@
   <meta charset="utf-8">
   <title>oald-layout-block-html</title>
   <style>
-    body>div,
     body,
-    html {
+    html,
+    div {
       height: 100%;
-
-    }
-
-    body {
       margin: 0;
     }
 
-    body>div {
+    div {
       font-size: 0;
-
-    }
-
-    body * {
-      font-size: 16px;
-    }
-
-    body>div {
       min-width: 600px;
+    }
+
+    div * {
+      font-size: 16px;
+      display: inline-block;
+      vertical-align: top;
     }
 
     aside {
       width: 200px;
       background-color: red;
       height: 100%;
-      display: inline-block;
       overflow: auto;
       vertical-align: top;
     }
@@ -47,11 +40,10 @@
     }
 
     main {
-      display: inline-block;
       width: calc(100% - 600px);
       height: 100%;
       background-color: green;
-      vertical-align: top;
+
     }
 
     main nav {
