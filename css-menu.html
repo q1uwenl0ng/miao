@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>css-menu.html</title>
+  <style>
+    html {
+      height: 100%;
+
+    }
+
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    header {
+      font-size: 0px;
+    }
+
+    header * {
+      font-size: 16px;
+    }
+
+
+    main {
+      height: 100%;
+    }
+
+    header {
+      background-color: rgb(60, 60, 60);
+      height: 40px;
+    }
+
+    .icon {
+      display: inline-block;
+      background-image: url(vs.png);
+      xbackground-color: #fff;
+      width: 50px;
+      height: 40px;
+      background-repeat: no-repeat;
+      background-size: 50px 35px;
+      vertical-align: top;
+      margin: 0px;
+    }
+
+    .button {
+      display: inline-block;
+      line-height: 40px;
+      vertical-align: top;
+      color: rgb(204, 204, 204);
+      width: 80px;
+      height: 40px;
+      xborder: 2px solid red;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 0px;
+    }
+
+
+    div.button:hover {
+      background-color: rgb(80, 80, 80);
+    }
+
+    ul {
+      margin: 0;
+    }
+
+    .button li {
+      padding: 0;
+      list-style: none;
+      text-align: left;
+      text-indent: 40px;
+      height: 40px;
+      box-sizing: border-box;
+      xborder: 3px solid red;
+    }
+
+    li:hover {
+      background-color: rgb(0, 122, 204);
+    }
+
+    #f {
+      position: relative;
+    }
+
+    .fmenu {
+      width: 400px;
+      height: 720px;
+      background-color: rgb(40, 40, 40);
+      position: absolute;
+      xtop: 40px;
+      xleft: 55px;
+      z-index: -1;
+      padding: 5px 0 5px 0;
+      margin: 0;
+    }
+
+    #f:hover {
+      xvisibility: visiable;
+      z-index: 1;
+    }
+
+
+    #e {
+      position: relative;
+    }
+
+    .emenu {
+      width: 390px;
+      height: 530px;
+      background-color: rgb(40, 40, 40);
+      position: absolute;
+      xtop: 40px;
+      xleft: 55px;
+      z-index: -1;
+    }
+
+    #s {
+      position: relative;
+    }
+
+    #s:hover {
+      visibility: visiable;
+      z-index: 2;
+    }
+
+    .smenu {
+      width: 470px;
+      height: 650px;
+      background-color: rgb(40, 40, 40);
+      position: absolute;
+      xtop: 40px;
+      xleft: 55px;
+      z-index: -1;
+    }
+
+
+    #v:hover {
+      visibility: visiable;
+      z-index: 2;
+    }
+
+    #v {
+      position: relative;
+    }
+
+    .vmenu {
+      width: 360px;
+      height: 730px;
+      background-color: rgb(40, 40, 40);
+      position: absolute;
+      xtop: 40px;
+      xleft: 55px;
+      z-index: -1;
+    }
+
+
+
+    #g:hover {
+      visibility: visiable;
+      z-index: 2;
+    }
+
+    #g {
+      position: relative;
+    }
+
+    .gmenu {
+      width: 440px;
+      height: 770px;
+      background-color: rgb(40, 40, 40);
+      position: absolute;
+      xtop: 40px;
+      xleft: 55px;
+      z-index: -1;
+    }
+
+
+
+    #r:hover {
+      visibility: visiable;
+      z-index: 2;
+    }
+
+    #r {
+      position: relative;
+    }
+
+    .rmenu {
+      width: 360px;
+      height: 650px;
+      background-color: rgb(40, 40, 40);
+      position: absolute;
+      xtop: 40px;
+      xleft: 55px;
+      z-index: -1;
+    }
+
+
+
+
+    #t:hover {
+      visibility: visiable;
+      z-index: 2;
+    }
+
+
+    #t {
+      position: relative;
+    }
+
+    .tmenu {
+      width: 380px;
+      height: 450px;
+      background-color: rgb(40, 40, 40);
+      position: absolute;
+      xtop: 40px;
+      xleft: 55px;
+      z-index: -1;
+    }
+
+    #e:hover {
+      visibility: visiable;
+      z-index: 2;
+    }
+
+    #h {
+      position: relative;
+    }
+
+    .hmenu {
+      width: 330px;
+      height: 650px;
+      background-color: rgb(40, 40, 40);
+      position: absolute;
+      xtop: 40px;
+      xleft: 55px;
+      z-index: -1;
+    }
+
+    #h:hover {
+      visibility: visiable;
+      z-index: 2;
+    }
+
+
+
+
+
+
+
+
+
+
+    div.footer {
+      height: calc(100% - 35px);
+      xbackground-color: yellow;
+      font-size: 0px;
+    }
+
+    div.footer * {
+      font-size: 16px;
+    }
+
+    aside {
+      height: 100%;
+      background-color: rgb(51, 51, 51);
+      width: 70px;
+      display: inline-block;
+    }
+
+    div.view {
+      background-color: rgb(30, 30, 30);
+      height: 100%;
+      width: calc(100% - 70px);
+      display: inline-block;
+      vertical-align: top;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="icon"></div>
+
+      <div class=button id="f">
+        <div>文件(F)</div>
+        <ul class="fmenu">
+          <li>新建文件</li>
+          <li>新建窗口</li>
+          <li>打开文件</li>
+          <li>打开文件夹</li>
+          <li>打开工作区</li>
+          <li>打开最近的文件</li>
+          <li>将文件夹添加到工作区</li>
+          <li>将工作区另存为</li>
+          <li>保存</li>
+          <li>另存为</li>
+          <li>全部保存</li>
+          <li>自动保存</li>
+          <li>首选项</li>
+          <li>还原文件</li>
+          <li>关闭编辑器</li>
+          <li>关闭文件夹</li>
+          <li>关闭窗口</li>
+          <li>退出</li>
+        </ul>
+      </div>
+
+
+      <div class=button id="e">
+        <div>编辑(E)</div>
+        <ul class=emenu></ul>
+      </div>
+
+
+      <div class="button" id=s>
+        <div>选择(S)</div>
+        <ul class="smenu"></ul>
+
+      </div>
+
+      <div class="button" id=v>
+        <div>查看(V)</div>
+        <ul class="vmenu"></ul>
+      </div>
+
+      <div class="button" id=g>
+        <div>转到(G)</div>
+        <ul class="gmenu"></ul>
+      </div>
+
+      <div class="button" id=r>
+        <div>运行(R)</div>
+        <ul class="rmenu"></ul>
+      </div>
+
+      <div class="button" id=t>
+        <div>终端(T)</div>
+        <ul class="tmenu"></ul>
+      </div>
+
+      <div class="button" id=h>
+        <div>帮助(H)</div>
+        <ul class="hmenu"></ul>
+      </div>
+
+
+
+
+
+
+
+
+
+    </header>
+
+    <div class="footer">
+      <aside></aside>
+      <div class="view"></div>
+    </div>
+
+  </main>
+</body>
+
+</html>
