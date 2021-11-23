@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>twitter-heart</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    section {
+      margin: 350px auto auto auto;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    main {
+      background-image: url(web_heart_animation.png);
+      background-repeat: no-repeat;
+      background-position: right 0 top 0;
+      width: 2900px;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    div {
+      xborder: tomato 3px solid;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      box-sizing: border-box;
+    }
+
+    main:hover {
+      width: 100px;
+      transition: width 2s steps(28, end);
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <main>
+      <div></div>
+    </main>
+  </section>
+</body>
+
+</html>
