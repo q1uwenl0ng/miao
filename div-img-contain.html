@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>div-img-contain</title>
+  <style>
+    /*  行内布局   */
+    .div1 {
+      height: 500px;
+      width: 500px;
+      margin: 50px auto 50px auto;
+      border: hotpink 2px solid;
+      padding: 0px;
+      position: relative;
+      line-height: 500px;
+
+      text-align: center;
+      /*水平居中*/
+
+      font-size: 0;
+      /*垂直居中*/
+    }
+
+    .div1 img {
+      box-sizing: border-box;
+      border: 3px solid brown;
+      vertical-align: middle;
+      /*垂直居中*/
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /*块布局定位*/
+    section {
+      position: relative;
+      border: hotpink 2px solid;
+      height: 500px;
+      width: 500px;
+      margin: 50px auto 50px auto;
+    }
+
+    section img {
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      box-sizing: border-box;
+      border: 3px solid brown;
+    }
+
+    /**直接对图片设置居中**/
+    .div3 {
+      height: 500px;
+      width: 500px;
+      margin: 50px auto 50px auto;
+      border: hotpink 2px solid;
+    }
+
+    .choice3 {
+      width: 100%;
+      height: 500px;
+      object-fit: scale-down;
+      border: brown 2px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class=div1><img src="div-img1.jpg" alt="div-img1.jpg"></div>
+  <div class=div1><img src="div-img2.jpg" alt="div-img2.jpg"></div>
+  <div class=div1><img src="div-img3.jpg" alt="div-img3.jpg"></div>
+
+  <section><img src="div-img1.jpg" alt="div-img1.jpg"></section>
+  <section><img src="div-img2.jpg" alt="div-img2.jpg"></section>
+  <section><img src="div-img3.jpg" alt="div-img3.jpg"></section>
+
+  <div class=div3><img src="div-img1.jpg" alt="div-img1.jpg" class=choice3></div>
+  <div class=div3><img src="div-img2.jpg" alt="div-img2.jpg" class=choice3></div>
+  <div class=div3><img src="div-img3.jpg" alt="div-img3.jpg" class=choice3></div>
+</body>
+
+</html>
