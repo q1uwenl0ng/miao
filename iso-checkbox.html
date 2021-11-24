@@ -20,15 +20,33 @@
 
     label {
 
-      box-sizing: border-box;
       display: inline-block;
       height: 156px;
       width: 270px;
-      border: rgb(205, 205, 205) 4px solid;
-      xbackground-color: black;
+      border: rgb(205, 205, 205) 3px solid;
+      background-color: rgb(48, 243, 75);
       border-radius: 80px;
       position: relative;
-      transition: 0.5s;
+      box-sizing: border-box;
+      transition: 0.5s 0.2s;
+    }
+
+    .incircle {
+      xborder: 1px solid black;
+      box-shadow: 0px 0px 5px rgb(197, 197, 197), 0px 0px 5px rgb(197, 197, 197), 0px 0px 5px rgb(197, 197, 197), 0px 0px 5px rgb(197, 197, 197), 0px 0px 5px rgb(197, 197, 197), 0px 0px 5px rgb(197, 197, 197), 0px 0px 5px rgb(197, 197, 197), 0px 0px 5px rgb(197, 197, 197), 0px 0px 5px rgb(197, 197, 197);
+
+      width: 264px;
+      height: 150px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-radius: 78px;
+      background-color: white;
+      z-index: 1;
+      xbox-sizing: border-box;
+      transition: 0.5s 0.2s;
     }
 
     .circle-button {
@@ -44,36 +62,22 @@
 
       box-sizing: border-box;
       z-index: 2;
-      transition: 0.5s;
+      transition: 0.5s 0.2s;
     }
 
-    .incircle {
-      xborder: 1px solid black;
-      width: 260px;
-      height: 150px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      border-radius: 75px;
-      background-color: white;
-      z-index: 1;
+
+    #checkbox1:checked+label {
+      xbackground-color: rgb(48, 243, 75);
+      border: rgb(48, 243, 75) 4px solid;
       transition: 0.5s 0.2s;
 
     }
 
-    #checkbox1:checked+label {
-      background-color: rgb(48, 243, 75);
-      border: rgb(48, 243, 75) 3px solid;
-      transition: 0.5s;
-
-    }
-
     #checkbox1:checked+label>div {
-      left: 124px;
-      box-shadow: 0px 0px 5px rgb(48, 243, 75);
-      transition: 0.5s;
+      left: 125px;
+      box-shadow: none;
+      border: 1px solid rgb(48, 243, 75);
+      transition: 0.5s 0.2s;
     }
 
     #checkbox1:checked+label>section {
