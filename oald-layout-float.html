@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>oald-layout-float</title>
+  <style>
+    html,
+    body,
+    section {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    section {
+      min-width: 600px;
+    }
+
+    aside {
+      height: 100%;
+      width: 200px;
+      overflow: auto;
+    }
+
+    .left {
+      float: left;
+      background-color: red;
+    }
+
+    main {
+      float: left;
+      height: 100%;
+      width: calc(100% - 600px);
+    }
+
+    header {
+      height: 200px;
+      background-color: green;
+    }
+
+    footer {
+      overflow: auto;
+      background-color: blue;
+      height: calc(100% - 200px);
+    }
+
+
+    .right1 {
+      float: left;
+      background-color: violet;
+    }
+
+    .right2 {
+      float: left;
+      background-color: orange;
+    }
+
+    /**  使用自闭合，触发BFC，不使用calc的方法
+    html,
+    body,
+    section {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    section {
+      min-width: 600px;
+      overflow: hidden;
+
+    }
+
+    aside {
+      height: 100%;
+      width: 200px;
+      overflow: auto;
+    }
+
+    .left {
+      float: left;
+      background-color: red;
+    }
+
+
+
+    .right1 {
+      float: right;
+      background-color: violet;
+    }
+
+    .right2 {
+      float: right;
+      background-color: orange;
+    }
+
+    main {
+      height: 100%;
+    }
+
+    header {
+      height: 200px;
+      background-color: green;
+    }
+
+    footer {
+      background-color: blue;
+      height: 100%;
+      overflow: auto;
+  }  */
+  </style>
+</head>
+
+<body>
+  <section>
+    <aside class=left>
+      lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id neque quos totam nisi expedita
+      fugiat ut a eius reiciendis blanditiis esse natus dolore cupiditate numquam praesentium, perferendis veritatis
+      veniam delectus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur commodi ducimus deleniti
+      saepe tempore deserunt sequi minima magni corrupti est laboriosam tempora, perspiciatis corporis quaerat odio
+      dolor delectus, ipsa ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam autem pariatur recusandae
+      provident architecto cumque nostrum impedit inventore, perferendis ratione aspernatur deserunt. Vero, consequatur
+      nisi. Odio ut itaque, nisi dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ipsum
+      nesciunt voluptas delectus obcaecati, eius facilis magni ullam asperiores repellendus deleniti tenetur. Molestiae
+      rem nostrum, sit iste, possimus mollitia numquam.
+    </aside>
+    <main>
+      <header>ssssssss</header>
+      <footer>222</footer>
+    </main>
+    <aside class=right1>
+      loremlorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id neque quos totam nisi
+      expedita fugiat ut a eius reiciendis blanditiis esse natus dolore cupiditate numquam praesentium, perferendis
+      veritatis veniam delectus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur commodi ducimus
+      deleniti saepe tempore deserunt sequi minima magni corrupti est laboriosam tempora, perspiciatis corporis quaerat
+      odio dolor delectus, ipsa ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam autem pariatur
+      recusandae provident architecto cumque nostrum impedit inventore, perferendis ratione aspernatur deserunt. Vero,
+      consequatur nisi. Odio ut itaque, nisi dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+      ipsum nesciunt voluptas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id neque quos totam nisi
+      expedita fugiat ut a eius reiciendis blanditiis esse natus dolore cupiditate numquam praesentium, perferendis
+      veritatis veniam delectus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur commodi ducimus
+      deleniti saepe tempore deserunt sequi minima magni corrupti est laboriosam tempora, perspiciatis corporis quaerat
+      odio dolor delectus, ipsa ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam autem pariatur
+      recusandae provident architecto cumque nostrum impedit inventore, perferendis ratione aspernatur deserunt. Vero,
+      consequatur nisi. Odio ut itaque, nisi dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
+      ipsum nesciunt voluptas
+    </aside>
+    <aside class=right2>
+      lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id neque quos totam nisi
+      expedita fugiat ut a eius reiciendis blanditiis esse natus dolore cupiditate numquam praesentium, perferendis
+      veritatis veniam delectus!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur commodi ducimus
+      deleniti saepe tempore deserunt sequi minima magni corrupti est laboriosam tempora, perspiciatis corporis quaerat
+      odio dolor delectus, ipsa ut.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam autem pariatur
+      recusandae provident architecto cumque nostrum impedit inventore, perferendis ratione aspernatur deserunt. Vero,
+      consequatur nisi. Odio ut itaque, nisi dolor.Lorem ipsum dolor sit amet, consectetur adipisicinlorem Lorem ipsum
+      dolor sit amet, consectetur adipisicing elit. Id neque quos totam nisi expedita fugiat ut a eius reiciendis
+      blanditiis esse natus dolore cupiditate numquam praesentium, perferendis veritatis veniam delectus!Lorem ipsum
+      dolor sit amet, consectetur adipisicing elit. Consequuntur commodi ducimus deleniti saepe tempore deserunt sequi
+      minima magni corrupti est laboriosam tempora, perspiciatis corporis quaerat odio dolor delectus, ipsa ut.Lorem
+      ipsum dolor sit amet, consectetur adipisicing elit. Veniam autem pariatur recusandae provident architecto cumque
+      nostrum impedit inventore, perferendis ratione aspernatur deserunt. Vero, consequatur nisi. Odio ut itaque, nisi
+      dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi ipsum nesciunt voluptasg elit. Excepturi
+      ipsum nesciunt voluptas
+    </aside>
+
+  </section>
+
+
+
+</body>
+
+</html>
