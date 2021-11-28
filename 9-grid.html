@@ -6,30 +6,76 @@
   <meta name="viewport" content="width=device-width">
   <title>9-grid.html</title>
   <style>
-    table {
-      border-collapse: collapse;
-      width: 150px;
-      height: 150px;
+    ul {
+      overflow: hidden;
+      width: 170px;
+      xborder: 1px solid black;
+      padding: 0px;
+      padding-bottom: 5px;
+
     }
 
-    td {
+    li {
       width: 50px;
       height: 50px;
-      box-sizing: border-box;
-      border: 2.9px solid blue;
+      border: 5px solid blue;
+      list-style: none;
+      float: left;
+      margin-right: -5px;
+      margin-bottom: -5px;
       text-align: center;
       line-height: 50px;
     }
 
+    li:hover {
+      border-color: red;
+      position: relative;
+    }
+
+
+
+    table {
+      margin-top: 50px;
+      border-collapse: collapse;
+
+    }
+
+    tr,
+    col {
+      border: 5px solid blue;
+    }
+
+    td {
+      padding: 0px;
+      width: 50px;
+      height: 50px;
+      xborder: 5px ridge blue;
+      text-align: center;
+    }
 
     td:hover {
-      border: 3px solid red;
+      border: 5px solid red;
     }
   </style>
 </head>
 
 <body>
+
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+  </ul>
   <table>
+    <col>
+    <col>
+    <col>
     <tr>
       <td class=cell>1</td>
       <td class=cell>2</td>
