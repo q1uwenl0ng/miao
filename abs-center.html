@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>abs-center</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    /**利用flex居中，子元素比父元素小时，使子元素margin为auto，会使子元素居中**/
+    .div1 {
+      height: 300px;
+      display: flex;
+      font-size: 0px;
+      /**去掉字体大小引起的空隙**/
+    }
+
+    .section1 {
+      background-color: yellow;
+      margin: auto;
+    }
+
+    /**flex2  图片居中,子元素比父元素大**/
+    .div2 {
+      margin-top: 50px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      xpadding-top: 20px;
+    }
+
+    .section2 {
+      xheight: 300px;
+      xwidth: 250px;
+      xbackground-color: yellow;
+      xmargin: auto;
+      /**使子元素margin为auto，会使上margin为0**/
+    }
+
+    /**flex3  子元素比父元素大时，  使用 justify-content: center;
+  align-items: center; 两条属性使子元素居中**/
+    .div3 {
+      margin-top: 100px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      xpadding-top: 20px;
+    }
+
+    .section3 {
+      height: 300px;
+      width: 250px;
+      xbackground-color: yellow;
+      xmargin: auto;
+      text-align: center;
+      line-height: 300px;
+    }
+
+    /**flex4  文字居中,子元素比父元素小**/
+    .div4 {
+      margin-top: 100px;
+      display: flex;
+      xpadding: 20px;
+    }
+
+    .section4 {
+      background-color: yellow;
+      margin: auto;
+      /**使子元素margin为auto，会使子元素居中**/
+    }
+
+    .div5 {
+      margin-top: 20px;
+      position: relative;
+      height: 200px;
+    }
+
+    .section5 {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <span>图片居中，使用margin：auto；子元素比父元素小</span>
+  <div class=div1>
+    <section class=section1><img
+        src="https://tse3-mm.cn.bing.net/th/id/OIP-C.rBm2i8aSCh-EDkXasEGuDAHaHa?w=188&h=187&c=7&r=0&o=5&pid=1.7" alt="">
+    </section>
+  </div>
+  <span>图片居中，使用 justify-content: center;
+    align-items: center;子元素比父元素大</span>
+  <div class=div2>
+    <section class=section2><img
+        src="https://tse1-mm.cn.bing.net/th/id/R-C.4d61d4fd677a439be7722e39436b4b34?rik=xhH%2fYs985L%2beJg&riu=http%3a%2f%2fwww.dmzx.com%2fd%2ffile%2f201706%2fd610ba8ca2384b09ee41862ede07efec.jpg&ehk=PO1F7VFkPFqDw787gywADVp4Q0JssSlyyRYIoF%2fyp9A%3d&risl=&pid=ImgRaw&r=0"
+        alt=""></section>
+  </div>
+  <div class=div3>
+    <section class=section3>块居中，子元素比父元素大</section>
+  </div>
+
+
+
+  <div class=div4>
+    <section class=section4>块居中，子元素比父元素小，flex居中方法4</section>
+  </div>
+
+
+
+
+  <div class=div5>
+    <section class=section5>定位居中，定位值为0，margin auto</section>
+  </div>
+
+
+</body>
+
+</html>

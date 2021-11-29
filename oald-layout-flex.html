@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>oald-layout-flex</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      height: 100%;
+    }
+
+    div {
+      height: 100%;
+      display: flex;
+    }
+
+    aside {
+      min-width: 200px;
+      max-width: 200px;
+      height: 100%;
+      overflow: auto;
+    }
+
+    .left {
+      background-color: yellow;
+    }
+
+
+    .right1 {
+      background-color: violet;
+    }
+
+    .right2 {
+      background-color: orange;
+    }
+
+    main {
+      flex-grow: 1;
+      height: 100%;
+    }
+
+    header {
+      overflow: auto;
+      height: 200px;
+      background-color: aqua;
+    }
+
+    footer {
+      background-color: blue;
+      height: calc(100% - 200px);
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <aside class=left>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium saepe nobis
+      distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo? Praesentium sit
+      aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium
+      saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo?
+      Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum
+      eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae
+      quo? Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+      illum eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo
+      repudiandae quo? Praesentium sit aspernatur nesciunt, odio.</aside>
+    <main>
+      <header>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium saepe nobis
+        distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo? Praesentium sit
+        aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium
+        saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo?
+        Praesentdi</header>
+      <footer>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium saepe nobis
+        distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo? Praesentium sit
+        aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium
+        saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo?
+        Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum
+        eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo
+        repudiandae quo? Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing
+        elit. Facilis illum eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid
+        explicabo repudiandae quo? Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Facilis illum eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet
+        eligendi aliquid explicabo repudiandae quo? Praesentium sit aspernatur nesciunt, odi</footer>
+    </main>
+    <aside class=right1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium saepe
+      nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo? Praesentium sit
+      aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium
+      saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo?
+      Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum
+      eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae
+      quo? Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+      illum eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo
+      repudiandae quo? Praesentium sit aspernatur nesciunt, odi</aside>
+    <aside class=right2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium saepe
+      nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo? Praesentium sit
+      aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum eum laudantium
+      saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae quo?
+      Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis illum
+      eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo repudiandae
+      quo? Praesentium sit aspernatur nesciunt, odiLorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
+      illum eum laudantium saepe nobis distinctio, laborum. Culpa illum provident amet eligendi aliquid explicabo
+      repudiandae quo? Praesentium sit aspernatur nesciunt, odi</aside>
+  </div>
+</body>
+
+</html>
