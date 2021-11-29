@@ -19,29 +19,36 @@
 
 
     /**浮动排列**/
-    dl {
+    .dl1 {
       overflow: hidden;
     }
 
-    .dl1 dt,
     .dl1 dd {
       float: left;
       height: 1em;
       width: 3em;
-      text-align: center;
-      padding-bottom: .9em;
-      padding-left: .5em;
-      margin: 0px;
+      text-align: right;
+      padding-bottom: .5em;
+      margin: 0 .3em 0.5em 0;
     }
 
     .dl1 dt {
+      height: 2em;
+      margin-bottom: -2em;
       clear: left;
+    }
+
+    .dl1 dt+dd {
+      margin-left: 2.5em;
     }
 
     /**行内排列**/
 
     .dl2 dd {
       display: inline-block;
+      height: 1em;
+      width: 3em;
+      text-align: right;
       margin: 0px;
     }
 
@@ -70,7 +77,7 @@
       <dd>某某某</dd>
       <dd>某某某</dd>
       <dd>某某某</dd>
-      <dd>某某某</dd>
+      <dd>某某三</dd>
 
       <dt>主演</dt>
       <dd>某某某</dd>
@@ -136,6 +143,7 @@
       <dd>某某某</dd>
     </dl>
   </div>
+
 </body>
 
 </html>
