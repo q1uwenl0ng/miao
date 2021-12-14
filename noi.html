@@ -74,8 +74,8 @@
 
   var r = Number(prompt('r'))
   var d = 2 * r
-  var l = 2 * pi * r
-  var s = pi * r * r
+  var l = 2 * 3.14 * r
+  var s = 3.14 * r * r
 
   console.log(d.toFixed(4), l.toFixed(4), s.toFixed(4))
 
@@ -86,9 +86,16 @@
   var R = 1 / r1 + 1 / r2
   console.log(R.toFixed(2))
 </script>
-<script id="ch0103/11">
 
+<script id="ch0103/11">
+  var a = Number(prompt('a'))
+  var b = Number(prompt('b'))
+  var r = a % b
+  console.log(r)
 </script>
 <script id="ch0103/12">
+  var r = Number(prompt('r'))
 
+  var v = 4 * 3.14 * r * r * r / 3
+  console.log(v.toFixed(2))
 </script>
