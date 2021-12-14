@@ -21,16 +21,16 @@
   var a = Number(prompt('a'))
   var b = Number(prompt('b'))
   var c = Number(prompt('c'))
-  var x = (a + b) / c
-  console.log(x.toFixed(0))
+  var x = parseInt((a + b) / c)
+  console.log(x)
 
 </script>
 <script id="ch0103/04">
 
   var a = Number(prompt('a'))
   var b = Number(prompt('b'))
-  var x = (a + b) / c
-  console.log(x.toFixed(0))
+  var x = parseInt((a + b) / c)
+  console.log(x)
   console.log(a % b)
 
 </script>
@@ -60,9 +60,35 @@
   var c = Number(prompt('c'))
   var d = Number(prompt('d'))
 
-  var f(x) = a * x * x * x + b * x * x + c * x + d
-  console.log(f(x))
+  var y = a * x * x * x + b * x * x + c * x + d
+  console.log(y)
 </script>
+
 <script id="ch0103/08">
+  var f = Number(prompt('f'))
+  var c = (f - 32) * 5 / 9
+  console.log(c.toFixed(5))
+</script>
+
+<script id="ch0103/09">
+
+  var r = Number(prompt('r'))
+  var d = 2 * r
+  var l = 2 * pi * r
+  var s = pi * r * r
+
+  console.log(d.toFixed(4), l.toFixed(4)，s.toFixed(4))
+
+</script>
+<script id="ch0103/10">
+  var r1 = Number(prompt('r1'))
+  var r2 = Number(prompt('r2'))
+  var R = 1 / r1 + 1 / r2
+  console.log(R.toFixed(2))
+</script>
+<script id="ch0103/11">
+
+</script>
+<script id="ch0103/12">
 
 </script>
