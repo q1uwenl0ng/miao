@@ -142,7 +142,7 @@
   var xb = Number(prompt('xb'))
   var yb = Number(prompt('yb'))
 
-  var z = sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya))
+  var z = sqrt((xb - xa) ** 2 + (yb - ya) ** 2)
   console.log(z.toFixed(3))
 
 </script>
@@ -153,9 +153,9 @@
   var y2 = Number(prompt('y2'))
   var x3 = Number(prompt('x3'))
   var y3 = Number(prompt('y3'))
-  var a = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
-  var b = sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1))
-  var c = sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3))
+  var a = sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
+  var b = sqrt((x3 - x1) ** 2 + (y3 - y1) ** 2)
+  var c = sqrt((x2 - x3) ** 2 + (y2 - y3) ** 2)
 
   var p = (a + b + c) / 2
 
