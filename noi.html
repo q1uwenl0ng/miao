@@ -93,7 +93,7 @@
   var a = Number(prompt('a'))
   var b = Number(prompt('b'))
   var k = parseInt(a / b)
-  var r = a - k * b
+  var r = a % b
   console.log(r)
 </script>
 
@@ -109,10 +109,10 @@
 
 <script id="ch0103/13">
   var n = Number(prompt('n'))
-  var a = string(n % 10)
-  var b = string(parseInt(n % 100 / 10))
-  var c = string(parseInt(n / 100))
-  console.log(c + b + a)
+  var a = n % 10
+  var b = parseInt(n % 100 / 10)
+  var c = parseInt(n / 100)
+  console.log(c, b, a)
 </script>
 
 
