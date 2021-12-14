@@ -29,7 +29,7 @@
 
   var a = Number(prompt('a'))
   var b = Number(prompt('b'))
-  var x = parseInt((a / b)
+  var x = parseInt(a / b)
   console.log(x)
   console.log(a % b)
 
@@ -74,8 +74,8 @@
 
   var r = Number(prompt('r'))
   var d = 2 * r
-  var l = 2 * 3.14 * r
-  var s = 3.14 * r * r
+  var l = 2 * 3.14159 * r
+  var s = 3.14159 * r * r
 
   console.log(d.toFixed(4), l.toFixed(4), s.toFixed(4))
 
@@ -83,14 +83,15 @@
 <script id="ch0103/10">
   var r1 = Number(prompt('r1'))
   var r2 = Number(prompt('r2'))
-  var R = 1 / r1 + 1 / r2
+  var R = 1 / (1 / r1 + 1 / r2)
   console.log(R.toFixed(2))
 </script>
 
 <script id="ch0103/11">
   var a = Number(prompt('a'))
   var b = Number(prompt('b'))
-  var r = a % b
+  var k = parseInt(a / b)
+  var r = a - k * b
   console.log(r)
 </script>
 <script id="ch0103/12">
@@ -106,7 +107,7 @@
   var a = n % 10
   var b = parseInt(n % 100 / 10)
   var c = parseInt(n / 100)
-  console.log(a, b, c)
+  console.log(c * 100 + b * 10 + a)
 </script>
 
 
