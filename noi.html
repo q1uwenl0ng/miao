@@ -123,8 +123,9 @@
   var r = Number(prompt('r'))
 
   var x = Math.ceil(20 * 1000 / (3.14159 * r * r * h))
+    / 向上取整 /
 
-  console.log(x)
+    console.log(x)
 </script>
 
 <script id="ch0103/15">
@@ -133,7 +134,7 @@
   var x = Number(prompt('x'))
   var y = Number(prompt('y'))
 
-  var z = parseInt(n - y / x)
+  var z = Math.trunc(n - y / x)
   console.log(z)
 </script>
 <script id="ch0103/16">
@@ -142,7 +143,7 @@
   var xb = Number(prompt('xb'))
   var yb = Number(prompt('yb'))
 
-  var z = sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya))
+  var z = Math.sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya))
   console.log(z.toFixed(3))
 
 </script>
@@ -153,13 +154,13 @@
   var y2 = Number(prompt('y2'))
   var x3 = Number(prompt('x3'))
   var y3 = Number(prompt('y3'))
-  var a = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
-  var b = sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1))
-  var c = sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3))
+  var a = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))
+  var b = Math.sqrt((x3 - x1) * (x3 - x1) + (y3 - y1) * (y3 - y1))
+  var c = Math.sqrt((x2 - x3) * (x2 - x3) + (y2 - y3) * (y2 - y3))
 
   var p = (a + b + c) / 2
 
-  var s = sqrt(p * (p - a) * (p - b) * (p - c))
+  var s = Math.sqrt(p * (p - a) * (p - b) * (p - c))
   console.log(s.toFixed(2))
 
 
