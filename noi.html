@@ -344,9 +344,9 @@
   var bike = 27 + 23 + L / 3
   var walk = L / 1.2
   if (bike > walk) {
-    console.log('Bike')
-  } else if (bike < walk) {
     console.log('Walk')
+  } else if (bike < walk) {
+    console.log('Bike')
   } else {
     console.log('All')
   }
@@ -404,10 +404,10 @@
   var b = Number(prompt())
   var c = Number(prompt())
 
-  if (a + b > c && a - b < c) {
-    console.log('YES')
+  if ((a + b) > c && a - b < c) {
+    console.log('yes')
   } else {
-    console.log('NO')
+    console.log('no')
   }
 </script>
 <script id="ch0104/17">
@@ -437,6 +437,9 @@
     console.log('yes')
   }
 </script>
+
+
+
 <script id="ch0104/19">
   var a = Number(prompt())
   var b = Number(prompt())
@@ -450,7 +453,7 @@
     if (b == 0) {
       console.log('Divided by zero!')
     } else {
-      console.log(a / b)
+      console.log(Math.trunc(a / b))
     }else if (o == '*') {
       console.log(a * b)
     }
@@ -482,6 +485,6 @@
   var n = Number(prompt())
   var x = Number(prompt())
   var y = Number(prompt())
-  var lost = Math.trunc(n - x * y)
+  var lost = Math.trunc(n - y / x)
   console.log(lost)
 </script>
