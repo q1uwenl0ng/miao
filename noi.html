@@ -444,7 +444,6 @@
   var a = Number(prompt())
   var b = Number(prompt())
   var o = prompt()
-  // 运算符
   if (o == '+') {
     console.log(a + b)
   } else if (o == '-') {
@@ -454,9 +453,9 @@
       console.log('Divided by zero!')
     } else {
       console.log(Math.trunc(a / b))
-    }else if (o == '*') {
-      console.log(a * b)
     }
+  } else if (o == '*') {
+    console.log(a * b)
   } else {
     console.log('Invalid operator!')
   }
