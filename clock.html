@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>clock</title>
+  <style>
+    * {
+      background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px 0px red;
+    }
+
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border-radius: 99999px;
+      border: 30px double;
+    }
+
+    li {
+      position: absolute;
+      font-size: 40px;
+      line-height: 100px;
+      text-align: center;
+      width: 100px;
+      height: 100px;
+    }
+
+    li.dial12 {
+      top: 0;
+      left: 200px;
+    }
+
+    li.dial6 {
+      bottom: 0;
+      left: 200px;
+    }
+
+    li.dial3 {
+      right: 0;
+      top: 200px;
+
+    }
+
+    li.dial9 {
+      left: 0;
+      top: 200px;
+    }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div>
+      <ul class="dial">
+        <li class="dial1">1</li>
+        <li class="dial2">2</li>
+        <li class="dial3">3</li>
+        <li class="dial4">4</li>
+        <li class="dial5">5</li>
+        <li class="dial6">6</li>
+        <li class="dial7">7</li>
+        <li class="dial8">8</li>
+        <li class="dial9">9</li>
+        <li class="dial10">10</li>
+        <li class="dial11">11</li>
+        <li class="dial12">12</li>
+      </ul>
+    </div>
+  </main>
+</body>
+
+</html>
