@@ -758,9 +758,64 @@
   sum = (x * power).toFixed(4)
   console.log(sum)
 </script>
-<script id="ch0105/15"></script>
-<script id="ch0105/16"></script>
-<script id="ch0105/17"></script>
+<script id="ch0105/15">
+  var R = Number(prompt())
+  var M = Number(prompt())
+  var Y = Number(prompt())
+  var sum = 0
+  var i = 1
+  var rate = 1
+  while (i <= Y) {
+    rate = rate * (1 + R * 0.01)
+    i = i + 1
+  }
+  sum = Math.trunc(M * rate)
+  console.log(sum)
+</script>
+<script id="ch0105/16">
+  var N = Number(prompt())
+  var K = Number(prompt())
+  var sum = 0
+  var M = 1
+  var success = 0
+  var price = 200
+  while (M <= 20) {
+    sum = sum + N
+    if (sum >= price) {
+      console.log(M)
+      success = 1
+    } else {
+      price = price * (1 + K * 0.01)
+      M = M + 1
+    }
+  }
+  if (success == 0) {
+    console.log('Impossible')
+  }
+</script>
+<script id="ch0105/17">
+  var k = Number(prompt())
+  var i = 3
+  var a1 = 1
+  var a2 = 1
+  var ak = 0
+  if (k == 1) {
+    ak = 1
+  }
+  if (k == 2) {
+    ak = 1
+  }
+  if (k >= 3) {
+    while (i <= k) {
+      i = i + 1
+      ak = a1 + a2
+      a1 = a2
+      a2 = ak
+    }
+  }
+  console.log(ak)
+
+</script>
 <script id="ch0105/18"></script>
 <script id="ch0105/19"></script>
 <script id="ch0105/20"></script>
