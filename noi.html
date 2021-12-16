@@ -819,6 +819,50 @@
   console.log(ak)
 
 </script>
-<script id="ch0105/18"></script>
-<script id="ch0105/19"></script>
+<script id="ch0105/18">
+  var n = Number(prompt())
+  var i = 2
+  var total
+  var effective
+  var x
+  var y
+  total = Number(prompt())
+  effective = Number(prompt())
+  x = effective / total * 100
+  while (i <= n) {
+    total = Number(prompt())
+    effective = Number(prompt())
+    y = effective / total * 100
+    i = i + 1
+    if (y - x > 5) {
+      console.log('better')
+    } else if (x - y > 5) {
+      console.log('worse')
+    } else {
+      console.log('same')
+    }
+  }
+</script>
+<script id="ch0105/19">
+  var n = Number(prompt())
+  var i = 1
+  var sum
+  var people
+  var L
+  var x
+  var y
+  var time
+  while (i <= n) {
+    x = Number(prompt())
+    y = Number(prompt())
+    people = Number(prompt())
+    L = Math.sqrt(x * x + y * y)
+    time = Math.ceil(2 * L / 50 + (1 + 0.5) * people)
+    // 距离注意算来回总距离
+    i = i + 1
+    console.log(time)
+  }
+</script>
+
+</script>
 <script id="ch0105/20"></script>
