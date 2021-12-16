@@ -413,7 +413,13 @@
   // console.log(pay)
 
   if (t == 'y') {
-    pay = Math.ceil(w / 500) * 4 + 8
+    if (w <= 500) {
+      pay = 8 + 5
+    } else {
+      pay = Math.ceil(w / 500) * 4 + 5
+    }
+  } else if (w < 500) {
+    pay = 8
   } else {
     pay = Math.ceil(w / 500) * 4
   }
@@ -540,6 +546,8 @@
 
 
 <script id="ch0105/01">
+
+
   var n = Number(prompt())
   var i = 1
   var sum = 0
@@ -552,6 +560,8 @@
   console.log(average)
 
 </script>
+
+
 <script id="ch0105/02">
   var i = 1
   var sum = 0
@@ -563,6 +573,8 @@
   average = (sum / 12).toFixed(2)
   console.log('$' + average)
 </script>
+
+
 <script id="ch0105/03">
   var n = Number(prompt())
   var i = 1
@@ -575,6 +587,9 @@
   average = (sum / n).toFixed(4)
   console.log(average)
 </script>
+
+
+
 <script id="ch0105/04">
   var n = Number(prompt())
   var i = 1
@@ -585,9 +600,10 @@
     i = i + 1
   }
   average = (sum / n).toFixed(5)
-  console.log(sum.toFixed(5))
-  console.log(average)
+  console.log(sum + ' ' + average)
 </script>
+
+
 <script id="ch0105/05">
   var n = Number(prompt())
   var result
@@ -602,6 +618,8 @@
   }
   console.log(max)
 </script>
+
+
 <script id="ch0105/06">
   var n = Number(prompt())
   var result
@@ -619,29 +637,23 @@
   }
   console.log(max - min)
 </script>
+
+
 <script id="ch0105/07">
   var n = Number(prompt())
-  var a
-  var b
-  var c
   var gold = 0
   var silver = 0
   var copper = 0
   var sum
+  var i = 1
   while (i <= n) {
     i = i + 1
-    a = Number(prompt())
-    gold = gold + a
-    b = Number(prompt())
-    silver = silver + b
-    c = Number(prompt())
-    copper = copper + c
+    gold = gold + Number(prompt())
+    silver = silver + Number(prompt())
+    copper = copper + Number(prompt())
   }
   sum = gold + silver + copper
-  console.log(gold)
-  console.log(silver)
-  console.log(coppper)
-  console.log(sum)
+  console.log(gold + ' ' + silver + ' ' + copper + ' ' + sum)
 </script>
 <script id="ch0105/08">
   var n = Number(prompt())
@@ -655,24 +667,97 @@
   deg = (n - 2) * 180 - sum
   console.log(deg)
 </script>
+
 <script id="ch0105/09">
   var m = Number(prompt())
   var n = Number(prompt())
-  var x = 0
   var sum = 0
   while (m <= n) {
-    m = m + 1
     if (m % 2 != 0) {
       sum = sum + m
     }
+    m = m + 1
   }
   console.log(sum)
 </script>
-<script id="ch0105/10"></script>
-<script id="ch0105/11"></script>
-<script id="ch0105/12"></script>
-<script id="ch0105/13"></script>
-<script id="ch0105/14"></script>
+
+<script id="ch0105/10">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var sum = 0
+  while (m < n) {
+    if (m % 17 == 0) {
+      sum = sum + m
+    }
+    m = m + 1
+  }
+  console.log(sum)
+</script>
+<script id="ch0105/11">
+  var k = Number(prompt())
+  var n
+  var i = 1
+  var one = 0
+  var five = 0
+  var ten = 0
+  while (i <= k) {
+    n = Number(prompt())
+    if (n == 1) {
+      one = one + 1
+    }
+    if (n == 5) {
+      five = five + 1
+    }
+    if (n == 10) {
+      ten = ten + 1
+    }
+    i = i + 1
+  }
+  console.log(one)
+  console.log(five)
+  console.log(ten)
+
+</script>
+<script id="ch0105/12">
+
+  var n = Number(prompt())
+  var m = Number(prompt())
+  var i = 1
+  var x
+  var sum = 0
+  while (i <= n) {
+    x = Number(prompt())
+    if (x == m) {
+      sum = sum + 1
+    }
+    i = i + 1
+  }
+  console.log(sum)
+</script>
+<script id="ch0105/13">
+  var a = Number(prompt())
+  var n = Number(prompt())
+  var i = 1
+  var power = 1
+  while (i <= n) {
+    power = power * a
+    i = i + 1
+  }
+  console.log(power)
+</script>
+<script id="ch0105/14">
+  var x = Number(prompt())
+  var n = Number(prompt())
+  var i = 1
+  var power = 1
+  var sum
+  while (i <= n) {
+    power = power * (1 + 0.001)
+    i = i + 1
+  }
+  sum = (x * power).toFixed(4)
+  console.log(sum)
+</script>
 <script id="ch0105/15"></script>
 <script id="ch0105/16"></script>
 <script id="ch0105/17"></script>
