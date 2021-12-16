@@ -193,24 +193,29 @@
 
 
 <script id="ch0104/01">
-
   var N = Number(prompt())
+
   if (N > 0) {
     console.log('positive')
-  } else if (N == 0) {
+  }
+  if (N == 0) {
     console.log('zero')
-  } else {
+  }
+  if (N < 0) {
     console.log('negative')
   }
 </script>
 <script id="ch0104/02">
   var N = Number(prompt())
+
   if (N > 0) {
     console.log(N.toFixed(2))
-  } else if (N < 0) {
+  }
+  if (N < 0) {
     N = -N
     console.log(N.toFixed(2))
-  } else {
+  }
+  if (N == 0) {
     console.log(N.toFixed(2))
   }
 </script>
@@ -285,47 +290,71 @@
 
 </script>
 <script id="ch0104/09">
+  // var n = Number(prompt())
+  // if (n % 3 == 0) {
+  //   if (n % 5 == 0) {
+  //     if (n % 7 == 0) {
+  //       console.log(3, 5, 7)
+  //     } else {
+  //       console.log(3, 5)
+  //     }
+  //   } else if (n % 7 == 0) {
+  //     console.log(3, 7)
+  //   }
+  //   else {
+  //     console.log(3)
+  //   }
+  // } else if (n % 5 == 0) {
+  //   if (n % 7 == 0) {
+  //     console.log(5, 7)
+  //   } else if (n % 7 == 0) {
+  //     console.log(7)
+  //   } else {
+  //     console.log(5)
+  //   }
+  // }
+  // else {
+  //   console.log('n')
+  // }
+
   var n = Number(prompt())
+  var flag = false
+
   if (n % 3 == 0) {
-    if (n % 5 == 0) {
-      if (n % 7 == 0) {
-        console.log(3, 5, 7)
-      } else {
-        console.log(3, 5)
-      }
-    } else if (n % 7 == 0) {
-      console.log(3, 7)
-    }
-    else {
-      console.log(3)
-    }
-  } else if (n % 5 == 0) {
-    if (n % 7 == 0) {
-      console.log(5, 7)
-    } else if (n % 7 == 0) {
-      console.log(7)
-    } else {
-      console.log(5)
-    }
+    console.log(3)
+    flag = true
   }
-  else {
+  if (n % 5 == 0) {
+    console.log(5)
+    flag = true
+  }
+  if (n % 7 == 0) {
+    console.log(7)
+    flag = true
+  }
+
+  if (flag != true) {
     console.log('n')
   }
+
+
 </script>
 <script id="ch0104/10">
   var a = Number(prompt())
   var b = Number(prompt())
+  var i = 0
   if (a < 60) {
-    if (b < 60) {
-      console.log(0)
-    } else {
-      console.log(1)
-    }
-  } else if (b < 60) {
-    console.log(1)
+    i = i + 1
+  }
+  if (b < 60) {
+    i = i + 1
+  }
+  if (i == 1) {
+    console.log(i)
   } else {
     console.log(0)
   }
+
 </script>
 <script id="ch0104/11">
   var day = Number(prompt())
@@ -343,10 +372,10 @@
   var L = Number(prompt())
   var bike = 27 + 23 + L / 3
   var walk = L / 1.2
-  if (bike > walk) {
-    console.log('Walk')
-  } else if (bike < walk) {
+  if (L > 100) {
     console.log('Bike')
+  } else if (L < 100) {
+    console.log('Walk')
   } else {
     console.log('All')
   }
@@ -354,13 +383,13 @@
 <script id="ch0104/13">
   var x = Number(prompt())
   var y
-  if (x >= 0 && x < 5) {
+  if (x < 5) {
     y = -x + 2.5
     console.log(y.toFixed(3))
-  } else if (x >= 5 && x < 10) {
+  } else if (x < 10) {
     y = 2 - 1.5 * (x - 3) * (x - 3)
     console.log(y.toFixed(3))
-  } else if (x >= 10 && x < 20) {
+  } else if (x >= 10) {
     y = x / 2 - 1.5
     console.log(y.toFixed(3))
   }
@@ -369,17 +398,24 @@
   var w = Number(prompt())
   var t = prompt()
   var pay = 0
+  // if (t == 'y') {
+  //   pay = pay + 5
+  //   if (w <= 1000) {
+  //     pay = pay + 8
+  //   } else {
+  //     pay = Math.ceil((w - 1000) / 500) * 4 + 8 + pay
+  //   }
+  // } else if (w <= 1000) {
+  //   pay = 8
+  // } else {
+  //   pay = Math.ceil((w - 1000) / 500) * 4 + 8
+  // }
+  // console.log(pay)
+
   if (t == 'y') {
-    pay = pay + 5
-    if (w <= 1000) {
-      pay = pay + 8
-    } else {
-      pay = Math.ceil((w - 1000) / 500) * 4 + 8 + pay
-    }
-  } else if (w <= 1000) {
-    pay = 8
+    pay = Math.ceil(w / 500) * 4 + 8
   } else {
-    pay = Math.ceil((w - 1000) / 500) * 4 + 8
+    pay = Math.ceil(w / 500) * 4
   }
   console.log(pay)
 </script>
@@ -387,17 +423,19 @@
   var x = Number(prompt())
   var y = Number(prompt())
   var z = Number(prompt())
+  var max
   if (x >= y) {
     if (x >= z) {
-      console.log(x)
+      max = x
     } else {
-      console.log(z)
+      max = z
     }
   } else if (y >= z) {
-    console.log(y)
+    max = y
   } else {
-    console.log(z)
+    max = z
   }
+  console.log(max)
 </script>
 <script id="ch0104/16">
   var a = Number(prompt())
@@ -414,11 +452,7 @@
   var year = Number(prompt())
   if (year % 4 == 0) {
     if (year % 100 == 0) {
-      if (year % 400 == 0) {
-        console.log('Y')
-      } else {
-        console.log('N')
-      }
+      console.log('N')
     } else {
       console.log('Y')
     }
@@ -429,12 +463,18 @@
 <script id="ch0104/18">
   var x = Number(prompt())
   var y = Number(prompt())
-  if (x > 1 || x < -1) {
-    console.log('no')
-  } else if (y > 1 || y < -1) {
-    console.log('no')
-  } else {
+  // if (x > 1 || x < -1) {
+  //   console.log('no')
+  // } else if (y > 1 || y < -1) {
+  //   console.log('no')
+  // } else {
+  //   console.log('yes')
+  // }
+
+  if ((x >= -1 && x <= 1) && (y >= -1 && y <= 1)) {
     console.log('yes')
+  } else {
+    console.log('no')
   }
 </script>
 
@@ -444,19 +484,29 @@
   var a = Number(prompt())
   var b = Number(prompt())
   var o = prompt()
+  var result
+  var flag = 0
   if (o == '+') {
     console.log(a + b)
-  } else if (o == '-') {
+    flag = 1
+  }
+  if (o == '-') {
     console.log(a - b)
-  } else if (o == '/') {
+    flag = 1
+  }
+  if (o == '/') {
+    flag = 1
     if (b == 0) {
       console.log('Divided by zero!')
     } else {
       console.log(a / b)
     }
-  } else if (o == '*') {
+  }
+  if (o == '*') {
+    flag = 1
     console.log(a * b)
-  } else {
+  }
+  if (flag == 0) {
     console.log('Invalid operator!')
   }
 </script>
@@ -487,3 +537,37 @@
   var lost = Math.trunc(n - y / x)
   console.log(lost)
 </script>
+
+
+<script id="ch0105/01">
+  var n = Number(prompt())
+  var i = 1
+  var sum = 0
+  var average
+  while (i <= n) {
+    sum = sum + Number(prompt())
+    i = i + 1
+  }
+  average = (sum / n).toFixed(2)
+  console.log(average)
+
+</script>
+<script id="ch0105/02"></script>
+<script id="ch0105/03"></script>
+<script id="ch0105/04"></script>
+<script id="ch0105/05"></script>
+<script id="ch0105/06"></script>
+<script id="ch0105/07"></script>
+<script id="ch0105/08"></script>
+<script id="ch0105/09"></script>
+<script id="ch0105/10"></script>
+<script id="ch0105/11"></script>
+<script id="ch0105/12"></script>
+<script id="ch0105/13"></script>
+<script id="ch0105/14"></script>
+<script id="ch0105/15"></script>
+<script id="ch0105/16"></script>
+<script id="ch0105/17"></script>
+<script id="ch0105/18"></script>
+<script id="ch0105/19"></script>
+<script id="ch0105/20"></script>
