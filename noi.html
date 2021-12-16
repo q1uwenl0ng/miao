@@ -776,17 +776,20 @@
   var N = Number(prompt())
   var K = Number(prompt())
   var sum = 0
+  var i = 1
   var M = 1
   var success = 0
   var price = 200
-  while (M <= 20) {
+  while (i <= 20) {
     sum = sum + N
     if (sum >= price) {
       console.log(M)
       success = 1
+      i = 21 //跳出循环
     } else {
       price = price * (1 + K * 0.01)
       M = M + 1
+      i = M
     }
   }
   if (success == 0) {
