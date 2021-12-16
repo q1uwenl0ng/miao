@@ -966,14 +966,16 @@
   var e
   var f
   while (i < 343) {
-    c = i % 7
-    b = (i - c) % 49
-    a = Math.trunc(i / 49)
-    f = i % 9
-    e = (i - f) % 81
-    d = Math.trunc(i / 81)
+    c = String(i % 7)
+    b = String((i - c) % 49)
+    a = String(Math.trunc(i / 49))
+    f = String(i % 9)
+    e = String((i - f) % 81)
+    d = String(Math.trunc(i / 81))
     if (b == e && c == d && a == f) {
       console.log(i)
+      console.log(a + b + c)
+      console.log(d + e + f)
     }
     i = i + 1
   }
