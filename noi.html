@@ -552,14 +552,122 @@
   console.log(average)
 
 </script>
-<script id="ch0105/02"></script>
-<script id="ch0105/03"></script>
-<script id="ch0105/04"></script>
-<script id="ch0105/05"></script>
-<script id="ch0105/06"></script>
-<script id="ch0105/07"></script>
-<script id="ch0105/08"></script>
-<script id="ch0105/09"></script>
+<script id="ch0105/02">
+  var i = 1
+  var sum = 0
+  var average
+  while (i <= 12) {
+    sum = sum + Number(prompt())
+    i = i + 1
+  }
+  average = (sum / 12).toFixed(2)
+  console.log('$' + average)
+</script>
+<script id="ch0105/03">
+  var n = Number(prompt())
+  var i = 1
+  var sum = 0
+  var average
+  while (i <= n) {
+    sum = sum + Number(prompt())
+    i = i + 1
+  }
+  average = (sum / n).toFixed(4)
+  console.log(average)
+</script>
+<script id="ch0105/04">
+  var n = Number(prompt())
+  var i = 1
+  var sum = 0
+  var average
+  while (i <= n) {
+    sum = sum + Number(prompt())
+    i = i + 1
+  }
+  average = (sum / n).toFixed(5)
+  console.log(sum.toFixed(5))
+  console.log(average)
+</script>
+<script id="ch0105/05">
+  var n = Number(prompt())
+  var result
+  var i = 1
+  var max = 0
+  while (i <= n) {
+    result = Number(prompt())
+    i = i + 1
+    if (max <= result) {
+      max = result
+    }
+  }
+  console.log(max)
+</script>
+<script id="ch0105/06">
+  var n = Number(prompt())
+  var result
+  var i = 1
+  var max = 0
+  var min = 0
+  while (i <= n) {
+    result = Number(prompt())
+    i = i + 1
+    if (max <= result) {
+      max = result
+    } else if (min >= result) {
+      min = result
+    }
+  }
+  console.log(max - min)
+</script>
+<script id="ch0105/07">
+  var n = Number(prompt())
+  var a
+  var b
+  var c
+  var gold = 0
+  var silver = 0
+  var copper = 0
+  var sum
+  while (i <= n) {
+    i = i + 1
+    a = Number(prompt())
+    gold = gold + a
+    b = Number(prompt())
+    silver = silver + b
+    c = Number(prompt())
+    copper = copper + c
+  }
+  sum = gold + silver + copper
+  console.log(gold)
+  console.log(silver)
+  console.log(coppper)
+  console.log(sum)
+</script>
+<script id="ch0105/08">
+  var n = Number(prompt())
+  var sum = 0
+  var i = 1
+  var deg = 0
+  while (i < n) {
+    i = i + 1
+    sum = sum + Number(prompt())
+  }
+  deg = (n - 2) * 180 - sum
+  console.log(deg)
+</script>
+<script id="ch0105/09">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var x = 0
+  var sum = 0
+  while (m <= n) {
+    m = m + 1
+    if (m % 2 != 0) {
+      sum = sum + m
+    }
+  }
+  console.log(sum)
+</script>
 <script id="ch0105/10"></script>
 <script id="ch0105/11"></script>
 <script id="ch0105/12"></script>
