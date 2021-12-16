@@ -336,6 +336,7 @@
   if (flag != true) {
     console.log('n')
   }
+  // 输出不是一行
 
 
 </script>
@@ -397,31 +398,12 @@
 <script id="ch0104/14">
   var w = Number(prompt())
   var t = prompt()
-  var pay = 0
-  // if (t == 'y') {
-  //   pay = pay + 5
-  //   if (w <= 1000) {
-  //     pay = pay + 8
-  //   } else {
-  //     pay = Math.ceil((w - 1000) / 500) * 4 + 8 + pay
-  //   }
-  // } else if (w <= 1000) {
-  //   pay = 8
-  // } else {
-  //   pay = Math.ceil((w - 1000) / 500) * 4 + 8
-  // }
-  // console.log(pay)
-
+  var pay = 8
+  if (w > 1000) {
+    pay = pay + Math.ceil((w - 1000) / 500) * 4
+  }
   if (t == 'y') {
-    if (w <= 500) {
-      pay = 8 + 5
-    } else {
-      pay = Math.ceil(w / 500) * 4 + 5
-    }
-  } else if (w < 500) {
-    pay = 8
-  } else {
-    pay = Math.ceil(w / 500) * 4
+    pay = pay + 5
   }
   console.log(pay)
 </script>
@@ -429,16 +411,11 @@
   var x = Number(prompt())
   var y = Number(prompt())
   var z = Number(prompt())
-  var max
-  if (x >= y) {
-    if (x >= z) {
-      max = x
-    } else {
-      max = z
-    }
-  } else if (y >= z) {
+  var max = x
+  if (max < y) {
     max = y
-  } else {
+  }
+  if (max < z) {
     max = z
   }
   console.log(max)
