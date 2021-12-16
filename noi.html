@@ -593,7 +593,7 @@
       max = result
     }
   }
-  console.lohhug(max)
+  console.log(max)
 </script>
 
 
@@ -601,9 +601,12 @@
   var n = Number(prompt())
   var result
   var i = 1
-  var max = 0
-  var min = 0
-  while (i <= n) {
+  var max
+  var min
+  result = Number(prompt())
+  max = result
+  min = result
+  while (i < n) {
     result = Number(prompt())
     i = i + 1
     if (max <= result) {
@@ -855,3 +858,168 @@
   console.log(sum.toFixed(4))
   console.log(h.toFixed(7))
 </script>
+
+
+
+<script id="ch0105/21">
+  var N = Number(prompt())
+  while (N != 1) {
+    if (N % 2 == 1) {
+      var M = N * 3 + 1
+      console.log(N + '*3+1=' + M)
+      N = M
+    }
+    if (N % 2 == 0) {
+      var M = N / 2
+      console.log(N + '/2=' + M)
+      N = M
+    }
+  }
+  console.log('End')
+
+
+</script>
+<script id="ch0105/22">
+  var budget
+  var month = 0
+  var cash = 0
+  var savings = 0
+  var firstmonth = 0
+  var surplus
+
+  while (month < 12) {
+    cash = cash + 300
+    month = month + 1
+    budget = Number(prompt())
+    surplus = cash - budget
+    if (surplus >= 100) {
+      cash = surplus % 100
+      savings = surplus - cash + savings
+    } else {
+      cash = surplus
+    }
+    while (firstmonth == 0 && cash < 0) {
+      firstmonth = month
+      console.log('-' + firstmonth)
+    }
+  }
+  if (firstmonth == 0) {
+    cash = cash + savings * (1 + 0.2)
+    console.log(cash)
+  }
+
+  // 好难
+
+
+</script>
+<script id="ch0105/23">
+  var m = Number(prompt())
+  var n = Number(prompt())
+  var i = 0
+  var need
+  var lack = 0
+  while (i < n) {
+    need = Number(prompt())
+    if (m - need < 0) {
+      lack = lack + 1
+      m = m
+    } else {
+      m = m - need
+    }
+    i = i + 1
+  }
+  console.log(lack)
+
+</script>
+<script id="ch0105/24">
+  var n = Number(prompt())
+  var times = 0
+  var sp //systolic pressure 收缩压
+  var dp //diastolic pressure 舒张压
+  var count = 0
+  var max = 0
+
+  while (times < n) {
+    sp = Number(prompt())
+    dp = Number(prompt())
+    if (sp >= 90 && sp <= 140 && dp >= 60 && dp <= 90) {
+      count = count + 1
+    } else if (max < count) {
+      max = count
+      count = 0
+    }
+    times = times + 1
+  }
+  if (count > max) {
+    max = count
+  }
+  console.log(max)
+</script>
+<script id="ch0105/25">
+  var i = 81
+  // var max7=342  min7=49
+  // var max9=728   min9=81
+  var a
+  var b
+  var c
+  var d
+  var e
+  var f
+  while (i < 343) {
+    c = i % 7
+    b = (i - c) % 49
+    a = Math.trunc(i / 49)
+    f = i % 9
+    e = (i - f) % 81
+    d = Math.trunc(i / 81)
+    if (b == e && c == d && a == f) {
+      console.log(i)
+    }
+    i = i + 1
+  }
+</script>
+<script id="ch0105/26">
+  var n = Number(prompt())
+  var i = 0
+  var count = 0
+  while (i < n) {
+    var N = Number(prompt())
+    var d = N % 10
+    var c = (N - d) % 100 / 10
+    var b = (N - d - 10 * c) % 1000 / 100
+    var a = Math.trunc(N / 1000)
+    if (d - a - b - c > 0) {
+      count = count + 1
+    }
+    i = i + 1
+  }
+  console.log(count)
+</script>
+<script id="ch0105/27">
+  var K = Number(prompt())
+  var n = 0
+  var Sn = 0
+  do {
+    n = n + 1
+    Sn = Sn + 1 / n
+  } while (Sn <= K)
+  console.log(n)
+</script>
+<script id="ch0105/28">
+  var n = Number(prompt())
+  var x
+  while (n != 0) {
+    x = n % 10
+    console.log(x)
+    n = (n - x) / 10
+  }
+
+</script>
+<script id="ch0105/29"></script>
+<script id="ch0105/30"></script>
+<script id="ch0105/31"></script>
+<script id="ch0105/32"></script>
+<script id="ch0105/33"></script>
+<script id="ch0105/34"></script>
+<script id="ch0105/35"></script>
+<script id="ch0105/36"></script>
