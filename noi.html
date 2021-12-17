@@ -1190,6 +1190,10 @@
   }
   console.log(N)
 </script>
+
+
+
+
 <script id="ch0105/38">
   var n = Number(prompt())
   var s = String()
@@ -1209,6 +1213,11 @@
     }
   }
   console.log(s)
+
+
+
+
+
 </script>
 <script id="ch0105/39">
   var sum = 0
@@ -1220,9 +1229,6 @@
   } console.log(sum)
 </script>
 <script id="ch0105/40">
-
-</script>
-<script id="ch0105/41">
   var n = Number(prompt())
   var count = 0
   for (var i = 1; i <= n; i++) {
@@ -1236,7 +1242,7 @@
   }
   console.log(count)
 </script>
-<script id="ch0105/42">
+<script id="ch0105/41">
   var L = Number(prompt())
   var R = Number(prompt())
   var count = 0
@@ -1248,7 +1254,7 @@
     }
   } console.log(count)
 </script>
-<script id="ch0105/43">
+<script id="ch0105/42">
   var h = Number(prompt())
   var w = Number(prompt())
   var icon = prompt()
@@ -1268,6 +1274,24 @@
     }
     console.log(result)
   }
+</script>
+<script id="ch0105/43">
+  var n = Number(prompt())
+  for (var p = Math.trunc(n / 2); p > 2; p--) {
+    var count = 0
+    if (n % p == 0) {
+      for (var i = 2; i <= (p + 1) / 2; i++) {
+        if (p % i == 0) {
+          count++
+        }
+      }
+      if (count == 0) {
+        console.log(p)
+        break
+      }
+    }
+  }
+
 </script>
 <script id="ch0105/44">
   var count = 0//质数个数
@@ -1300,8 +1324,16 @@
   console.log(sum)
 </script>
 
-<script id="narcissistic">//输入一个数，判断是否是水仙花数
-
+<script id="narcissistic">//输入一个数，判断是否是水仙花数  水仙花数是指一种三位数,其各个数之立方和等于该数
+  var n = Number(prompt())
+  var a = n % 10
+  var b = (n - a) / 10 % 10
+  var c = (n - a - 10 * b) / 100
+  if (a * a * a + b * b * b + c * c * c == n) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
 </script>
 <script id="narcissistics">//输出10000以内的水仙花数</script>
 <script id="palindrom">//输入一个数，判断它数是否是回文数，如1223221</script>
