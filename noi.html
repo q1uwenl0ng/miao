@@ -1336,12 +1336,15 @@
   }
 </script>
 <script id="narcissistics">//输出10000以内的水仙花数
-  var sum = 0
-  for (var i = 0; i <= 10000; i++) {
-    for (var j = 0; j) {
-      var a = i % 10
-      var b = i - a
-
+  for (var i = 1; i <= 10000; i++) {
+    var sum = 0
+    for (var j = i; j != 0;) {
+      var a = j % 10
+      j = (j - a) / 10
+      sum = a * a * a + sum
+    }
+    if (sum == i) {
+      console.log(sum)
     }
   }
 
