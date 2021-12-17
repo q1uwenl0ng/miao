@@ -1205,7 +1205,10 @@
   for (var i = 0; i <= n; i++) {
     var a = Number(prompt())
     if (m == 0) break;//最后一个m==0时，为常数项，倒数为0
-    s = s + a * m + ' '
+    s = s + a * m
+    if (m != 1) {
+      s = s + ' '
+    }
     m = m - 1
   }
   console.log(s)
