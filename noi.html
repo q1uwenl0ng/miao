@@ -1071,6 +1071,7 @@
   var M = Number(prompt())//总人数
   var n = 0//操作的灯编号
   var m = 0//操作的人编号
+  var result = 0
   var indicator = 1
   //每个人自己的号码所在的灯自己操作后，后面的人不能操作了
   //换个角度就是每盏灯，只被固定的人操作,针对每盏灯循环
@@ -1083,15 +1084,16 @@
       }
     }
     if (indicator == -1 && n == 1) {
-      console.log(n)
+      result = 1
     }
     if (indicator == -1 && n != 1) {
-      console.log(',' + n)
+      result = result + ',' + n
     }
 
     indicator = 1//一轮结束，把灯回到开启状态
     m = 0
   }
+  console.log(result)
 </script>
 <script id="ch0105/32">
   var n = Number(prompt())
