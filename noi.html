@@ -583,9 +583,9 @@
 
 <script id="ch0105/05">
   var n = Number(prompt())
-  var result
+  var result//score
   var i = 1
-  var max = 0
+  var max = -Infinity  //负无穷大
   while (i <= n) {
     result = Number(prompt())
     i = i + 1
@@ -599,20 +599,18 @@
 
 <script id="ch0105/06">
   var n = Number(prompt())
-  var result
-  var i = 1
-  var max
-  var min
-  result = Number(prompt())
-  max = result
-  min = result
+  var score = 0
+  var i = 0
+  var max = -Infinity
+  var min = Infinity
   while (i < n) {
-    result = Number(prompt())
+    score = Number(prompt())
     i = i + 1
-    if (max <= result) {
-      max = result
-    } else if (min >= result) {
-      min = result
+    if (max < score) {
+      max = score
+    }
+    if (min > score) {
+      min = score
     }
   }
   console.log(max - min)
@@ -624,7 +622,7 @@
   var gold = 0
   var silver = 0
   var copper = 0
-  var sum
+  var sum = 0
   var i = 1
   while (i <= n) {
     i = i + 1
@@ -1084,9 +1082,13 @@
         indicator = -indicator
       }
     }
-    if (indicator == -1) {
+    if (indicator == -1 && n == 1) {
       console.log(n)
     }
+    if (indicator == -1 && n != 1) {
+      console.log(',' + n)
+    }
+
     indicator = 1//一轮结束，把灯回到开启状态
     m = 0
   }
