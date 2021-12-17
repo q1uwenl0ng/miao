@@ -1110,7 +1110,30 @@
   console.log(sum.toFixed(4))
 
 </script>
-<script id="ch0105/33"></script>
-<script id="ch0105/34"></script>
+<script id="ch0105/33">
+  var n = Number(prompt())
+  var i = 0
+  var sum = 0
+  while (i < n) {
+    i = i + 1
+    if (i % 2 == 0) {
+      sum = sum - 1 / i
+    } else { sum = sum + 1 / i }
+  }
+  console.log(sum.toFixed(4))
+
+</script>
+<script id="ch0105/34">
+  var n = Number(prompt())
+  var sum = 0
+  var i = 0
+  var a = 1
+  while (i < n) {
+    i = i + 1
+    a = a * i
+    sum = sum + a
+  }
+  console.log(sum)
+</script>
 <script id="ch0105/35"></script>
 <script id="ch0105/36"></script>
