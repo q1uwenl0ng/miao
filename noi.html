@@ -773,19 +773,17 @@
   var K = Number(prompt())
   var sum = 0
   var i = 1
-  var M = 1
   var success = 0
   var price = 200
   while (i <= 20) {
     sum = sum + N
     if (sum >= price) {
-      console.log(M)
+      console.log(i)
       success = 1
-      i = 21 //跳出循环
+      break//跳出循环
     } else {
       price = price * (1 + K * 0.01)
-      M = M + 1
-      i = M
+      i = i + 1
     }
   }
   if (success == 0) {
@@ -794,17 +792,14 @@
 </script>
 <script id="ch0105/17">
   var k = Number(prompt())
-  var i = 3
-  var a1 = 1
+  var i = 2
+  var a1 = 0
   var a2 = 1
   var ak = 0
   if (k == 1) {
     ak = 1
   }
-  if (k == 2) {
-    ak = 1
-  }
-  if (k >= 3) {
+  if (k >= 2) {
     while (i <= k) {
       i = i + 1
       ak = a1 + a2
@@ -1202,21 +1197,105 @@
     s = 0
   }
   m = n
-  for (var i = 0; i <= n; i++) {
-    var a = Number(prompt())
-    if (m == 0) break;//最后一个m==0时，为常数项，倒数为0
-    s = s + a * m
-    if (m != 1) {
-      s = s + ' '
+  if (n !== 0) {
+    for (var i = n; i >= 0; i--) {
+      var a = Number(prompt())
+      if (n == 0) break;//最后一个m==0时，为常数项，倒数为0
+      s = s + a * n
+      if (n !== 1) {
+        s = s + ' '
+      }
+      n = n - 1
     }
-    m = m - 1
   }
   console.log(s)
 </script>
-<script id="ch0105/39"></script>
-<script id="ch0105/40"></script>
-<script id="ch0105/41"></script>
-<script id="ch0105/42"></script>
-<script id="ch0105/43"></script>
-<script id="ch0105/44"></script>
-<script id="ch0105/45"></script>
+<script id="ch0105/39">
+  var sum = 0
+  var n = Number(prompt())
+  for (var i = 1; i <= n; i++) {
+    if (i % 7 !== 0 && Math.trunc(i / 10) !== 7 && i % 10 !== 7) {
+      sum = sum + i * i
+    }
+  } console.log(sum)
+</script>
+<script id="ch0105/40">
+
+</script>
+<script id="ch0105/41">
+  var n = Number(prompt())
+  var count = 0
+  for (var i = 1; i <= n; i++) {
+    for (var j = i; j > 0;) {
+      var m = j % 10
+      if (m == 1) {
+        count = count + 1
+      }
+      j = (j - m) / 10
+    }
+  }
+  console.log(count)
+</script>
+<script id="ch0105/42">
+  var L = Number(prompt())
+  var R = Number(prompt())
+  var count = 0
+  for (var i = L; i <= R; i++) {
+    for (var x = i; x > 0; x = (x - x % 10) / 10) {
+      if (x % 10 == 2) {
+        count++
+      }
+    }
+  } console.log(count)
+</script>
+<script id="ch0105/43">
+  var h = Number(prompt())
+  var w = Number(prompt())
+  var icon = prompt()
+  var inside = Number(prompt())
+  for (var i = 0; i < h; i++) {
+    var result = ''
+    for (var j = 0; j < w; j++) {
+      if (i == 0 || j == 0 || i == h - 1 || j == w - 1) {
+        result = result + icon
+      } else {
+        if (inside == 1) {
+          result = result + icon
+        } else {
+          result = result + ' '
+        }
+      }
+    }
+    console.log(result)
+  }
+</script>
+<script id="ch0105/44">
+  var count = 0//质数个数
+  var countx = 0//能整除的公约数个数
+  var n = Number(prompt())
+  for (var i = 1; count < n;) {//count==n时循环结束
+    i++
+    countx = 0
+    for (var x = 2; x <= i; x++) {
+      if (i % x == 0) {
+        countx++
+      }
+    }
+    if (countx == 1) {
+      count++
+    }
+  }
+  console.log(i)
+</script>
+<script id="ch0105/45">
+  var n = Number(prompt())
+  var sum = 0
+  var day = 0
+  for (var i = 1; day < n; i++) {
+    for (var j = 1; j <= i; j++) {
+      sum = sum + i
+      day = day + 1
+    }
+  }
+  console.log(sum)
+</script>
