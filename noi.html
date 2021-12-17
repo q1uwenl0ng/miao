@@ -1017,9 +1017,70 @@
   }
 
 </script>
-<script id="ch0105/29"></script>
-<script id="ch0105/30"></script>
-<script id="ch0105/31"></script>
+<script id="ch0105/29">
+  var N = Number(prompt())
+  var x
+  var n//中间数
+  var positive = 1
+  if (N < 0) {
+    positive = 0
+    N = -N
+    console.log('-')
+  }
+  if (N == 0) {
+    console.log(N)
+  }
+  n = N
+  while (N > 0) {
+    x = N % 10
+    if (x != 0 || N < n) {
+      console.log(x)
+    }
+    N = (N - x) / 10
+  }
+</script>
+<script id="ch0105/30">
+  var m = Number(prompt())
+  var k = Number(prompt())
+  var count = 0
+  var n
+  if (m % 19 == 0) {
+    while (m != 0) {
+      n = m % 10
+      if (n == 3) {
+        count = count + 1
+      }
+      m = (m - n) / 10
+    }
+    if (count == k) {
+      console.log('YES')
+    } else {
+      console.log('NO')
+    }
+
+  } else {
+    console.log('NO')
+  }
+</script>
+<script id="ch0105/31">
+  var N = Number(prompt())
+  var M = Number(prompt())
+  var m = 0
+  var n = 1
+  //每个人自己的号码所在的灯自己操作后，后面的人不能操作了
+  while (m < M) {
+    m = m + 1
+    while (n < N) {
+      kl
+    }
+  }
+  if (count == k) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+
+</script>
 <script id="ch0105/32"></script>
 <script id="ch0105/33"></script>
 <script id="ch0105/34"></script>
