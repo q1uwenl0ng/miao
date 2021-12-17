@@ -1069,25 +1069,47 @@
   }
 </script>
 <script id="ch0105/31">
-  var N = Number(prompt())
-  var M = Number(prompt())
-  var m = 0
-  var n = 1
+  var N = Number(prompt())//总灯
+  var M = Number(prompt())//总人数
+  var n = 0//操作的灯编号
+  var m = 0//操作的人编号
+  var indicator = 1
   //每个人自己的号码所在的灯自己操作后，后面的人不能操作了
-  while (m < M) {
-    m = m + 1
-    while (n < N) {
-      kl
+  //换个角度就是每盏灯，只被固定的人操作,针对每盏灯循环
+  while (n < N) {
+    n = n + 1
+    while (m < M) {
+      m = m + 1
+      if (n % m == 0 && n >= m) {
+        indicator = -indicator
+      }
     }
+    if (indicator == -1) {
+      console.log(n)
+    }
+    indicator = 1//一轮结束，把灯回到开启状态
+    m = 0
   }
-  if (count == k) {
-    console.log('YES')
-  } else {
-    console.log('NO')
+</script>
+<script id="ch0105/32">
+  var n = Number(prompt())
+  var q1
+  var p1
+  var q2 = 2
+  var p2 = 1
+  var i = 0
+  var sum = 0
+  while (i < n) {
+    q1 = q2
+    p1 = p2
+    sum = sum + q1 / p1
+    p2 = q1
+    q2 = q1 + p1
+    i = i + 1
   }
+  console.log(sum.toFixed(4))
 
 </script>
-<script id="ch0105/32"></script>
 <script id="ch0105/33"></script>
 <script id="ch0105/34"></script>
 <script id="ch0105/35"></script>
