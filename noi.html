@@ -1336,7 +1336,7 @@
   }
 </script>
 <script id="narcissistics">//输出10000以内的水仙花数
-  for (var i = 1; i <= 10000; i++) {
+  for (var i = 100; i <= 10000; i++) {
     var sum = 0
     for (var j = i; j != 0;) {
       var a = j % 10
@@ -1351,13 +1351,176 @@
 
 
 </script>
-<script id="palindrom">//输入一个数，判断它数是否是回文数，如1223221</script>
-<script id="weekday">//输入年份与月份，输出这个月的第一天是周几（视具体设定，周一可以用1或0表示）</script>
-<script id="complete-number">//输入一个数，判断它是否是完全数（自行查相关概念）</script>
-<script id="complete-numbers">//输出1000以内的完全数</script>
-<script id="prime">//输入一个数，判断它是否是素数</script>
-<script id="primes">//输出1000以内的素数</script>
-<script id="lcf&lcm">//输入两个数，输出它们的最大公约数和最小公倍数</script>
-<script id="sqrt">//输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt</script>
-<script id="itoa">//itoa 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换
+<script id="palindrom">//输入一个数，判断它数是否是回文数，如1223221
+  var n = Number(prompt())
+  var count = 1
+  var flag = true
+  if (n == 0) {
+    flag = true
+  } else {
+    for (var N = n; N != 0;) {
+      var a = N % 10
+      N = (N - a) / 10
+      if (N != 0) {
+        count *= 10
+      }
+    }
+    for (; count >= 1;) {
+      var x = n % 10
+      var y = Math.trunc(n / count)
+      if (x == y) {
+        n = (n - x) / 10 - y * (count / 10)
+        count = count / 100
+        flag = true
+      }
+      else {
+        flag = false
+        break
+      }
+    }
+  }
+  if (flag == true) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+
+
+</script>
+<script id="weekday">//输入年份与月份，输出这个月的第一天是周几（视具体设定，周一可以用1或0表示）
+  var year = Number(prompt())
+  var month = Number(prompt())
+  var sum = 0
+  var leap = true
+  for (var i = 1; i < year; i++) {
+    if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
+      sum = sum + 366
+    } else {
+      sum = sum + 365
+    }
+  }
+  if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+    leap = true
+  } else (leap = false)
+  for (var j = 1; j < month; j++) {
+    if (j == 1 || j == 3 || j == 5 || j == 7 || j == 8 || j == 10 || month == 12) {
+      sum = sum + 31
+    }
+    if (j == 4 || j == 6 || j == 9 || j == 11) {
+      sum = sum + 30
+    }
+    if (j == 2 && leap == true) {
+      sum = sum + 29
+    } else if (j == 2 && leap == false) {
+      sum = sum + 28
+    }
+  }
+  var weekday = (sum + 1) % 7
+  console.log(weekday)
+
+</script>
+<script id="complete-number">//输入一个数，判断它是否是完全数（自行查相关概念）完全数（Perfect number），又称完美数或完备数，是一些特殊的自然数。它所有的真因子（即除了自身以外的约数）的和（即因子函数），恰好等于它本身。
+
+  var n = Number(prompt())
+  var sum = 0
+  for (var i = 1; i <= n / 2; i++) {
+    if (n % i == 0) {
+      sum = sum + i
+    }
+  }
+  if (sum == n) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+
+
+</script>
+<script id="complete-numbers">//输出1000以内的完全数
+
+  for (var i = 1; i <= 1000; i++) {
+    var sum = 0
+    for (var j = 1; j <= i / 2; j++) {
+      if (i % j == 0) {
+        sum = sum + j
+      }
+    }
+    if (sum == i) {
+      console.log(i)
+    }
+  }
+
+</script>
+<script id="prime">//输入一个数，判断它是否是素数
+  var n = Number(prompt())
+  var prime = false
+  if (n == 1) {
+    prime = false
+  }
+  if (n == 2 || n == 3) {
+    prime = true
+  }
+  for (var i = 2; i <= n / 2; i++) {
+    if (n % i == 0) {
+      prime = false
+      break
+    } else {
+      prime = true
+    }
+  }
+  if (prime == true) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+
+
+
+</script>
+<script id="primes">//输出1000以内的素数
+
+  for (var j = 2; j <= 1000; j++) {
+    if (j == 2 || j == 3) {
+      prime = true
+    }
+    var prime = false
+    for (var i = 2; i <= j / 2; i++) {
+      if (j % i == 0) {
+        prime = false
+        break  //一定要及时break 否则会继续循环，后面又会改回true了
+      } else {
+        prime = true
+      }
+    }
+    if (prime == true) {
+      console.log(j)
+    }
+  }
+
+</script>
+<script id="lcf&lcm">//输入两个数，输出它们的最大公约数和最小公倍数
+  var x = Number(prompt())
+  var y = Number(prompt())
+  var z = x
+  if (x > y) {
+    z = x
+    x = y
+    y = z
+  }
+  for (var i = x; i >= 1; i--) {
+    if (x % i == 0 && y % i == 0) {
+      console.log(i)
+      break
+    }
+  }
+  for (var j = y; j <= x * y; j++) {
+    if (j % y == 0 && j % x == 0) {
+      console.log(j)
+      break
+    }
+  }
+</script>
+<script id="sqrt">//输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt<
+  /script>
+    < script id = "itoa" >//itoa 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换
 </script>
