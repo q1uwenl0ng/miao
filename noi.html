@@ -1200,21 +1200,15 @@
   if (n == 0) {
     s = 0
   }
-  m = n
   for (var i = n; i >= 0; i--) {
     var a = Number(prompt())
-    if (n == 0) break;//最后一个m==0时，为常数项，倒数为0
-    s = s + a * n
-    if (n !== 1) {
+    if (i == 0) break;//最后一个m==0时，为常数项，导数为0，不显示
+    s = s + a * i
+    if (i !== 1) {
       s = s + ' '
     }
-    n = n - 1
   }
   console.log(s)
-
-
-
-
 
 </script>
 <script id="ch0105/39">
