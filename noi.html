@@ -1478,12 +1478,11 @@
 
 </script>
 <script id="primes">//输出1000以内的素数
-
-  for (var j = 2; j <= 1000; j++) {
+  var prime = false
+  for (var j = 2; j <= 100; j++) {
     if (j == 2 || j == 3) {
       prime = true
     }
-    var prime = false
     for (var i = 2; i <= j / 2; i++) {
       if (j % i == 0) {
         prime = false
@@ -1520,7 +1519,9 @@
     }
   }
 </script>
-<script id="sqrt">//输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt<
-  /script>
-    < script id = "itoa" >//itoa 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换
+<script id="sqrt">//输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt
+  var n = Number(prompt())
+
+</script>
+<script id="itoa">//itoa 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换
 </script>
