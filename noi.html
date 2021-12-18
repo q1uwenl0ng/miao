@@ -1201,16 +1201,14 @@
     s = 0
   }
   m = n
-  if (n !== 0) {
-    for (var i = n; i >= 0; i--) {
-      var a = Number(prompt())
-      if (n == 0) break;//最后一个m==0时，为常数项，倒数为0
-      s = s + a * n
-      if (n !== 1) {
-        s = s + ' '
-      }
-      n = n - 1
+  for (var i = n; i >= 0; i--) {
+    var a = Number(prompt())
+    if (n == 0) break;//最后一个m==0时，为常数项，倒数为0
+    s = s + a * n
+    if (n !== 1) {
+      s = s + ' '
     }
+    n = n - 1
   }
   console.log(s)
 
