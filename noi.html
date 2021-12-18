@@ -1528,5 +1528,29 @@
 </script>
 <script id="itoa">//itoa 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换
   var n = Number(prompt())
-  console.log('')
+  var plus_minus = true
+  var s = ''
+  if (n < 0) {
+    plus_minus = false
+    n = -n
+  }
+  var N = n
+  for (var i = 1; N != 0;) {
+    var a = N % 10
+    N = (N - a) / 10
+    if (N != 0) {
+      i = i * 10
+    }
+  }
+  var m = n
+  for (; i >= 1;) {
+    s = s + Math.trunc(m / i)
+    m = m - Math.trunc(m / i) * i
+    i = i / 10
+  }
+  if (plus_minus == false) {
+    console.log('-' + s)
+  } else {
+    console.log(s)
+  }//不对啊，怎么转换
 </script>
