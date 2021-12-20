@@ -102,6 +102,7 @@
       border-radius: 99999px;
       box-sizing: border-box;
       background-color: silver;
+      z-index: 500;
     }
 
     .second-box,
@@ -117,13 +118,27 @@
 
     .second-box {
       width: 30px;
-      height: 360px;
+      height: 350px;
+      padding-top: 30px;
+      animation: second-box 1s;
+      animation-iteration-count: 86400;
       .second {
-        width: 20px;
-        height: 180px;
-        background-color: #fff;
-      }
+        width: 10px;
+        height: 200px;
+        margin:auto;
+          .second-top{
+            height: 10px;
+            width: 100%;
+            background: conic-gradient(transparent 37.5%,red 0 62.5%,transparent 0  100%);
+          }
+          .second-bottom{
+            height: 185px;
+            width: 10px;
+            background-color: red;
+          }
+        }
     }
+
   </style>
 </head>
 
@@ -145,7 +160,10 @@
     </ul>
     <div class="center"></div>
     <div class="second-box">
-      <div class="second"></div>
+      <div class="second">
+        <div class="second-top"></div>
+        <div class="second-bottom"></div>
+      </div>
     </div>
     <div class="minute"></div>
     <div class="hour"></div>

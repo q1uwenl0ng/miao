@@ -837,22 +837,21 @@
 <script id="ch0105/19">
   var n = Number(prompt())
   var i = 1
-  var sum
+  var sum = 0
   var people
   var L
   var x
   var y
-  var time
   while (i <= n) {
     x = Number(prompt())
     y = Number(prompt())
     people = Number(prompt())
     L = Math.sqrt(x * x + y * y)
-    time = Math.ceil(2 * L / 50 + (1 + 0.5) * people)
-    // 距离注意算来回总距离
+    sum = Math.ceil(2 * L / 50 + (1 + 0.5) * people) + sum
+    // 距离注意算来回总距离,sum计算总时间累加
     i = i + 1
-    console.log(time)
   }
+  console.log(sum)
 </script>
 
 </script>
@@ -933,7 +932,6 @@
     need = Number(prompt())
     if (m - need < 0) {
       lack = lack + 1
-      m = m
     } else {
       m = m - need
     }
@@ -967,7 +965,7 @@
   console.log(max)
 </script>
 <script id="ch0105/25">
-  var i = 81
+  var i = 49
   // var max7=342  min7=49
   // var max9=728   min9=81
   var a
@@ -987,6 +985,7 @@
       console.log(i)
       console.log(a + b + c)
       console.log(d + e + f)
+      //console.log(''+a+b+c)
     }
     i = i + 1
   }
@@ -1055,6 +1054,7 @@
   } else {
     console.log(result)
   }
+  //sign=Math.sign()取正负符号，console.log(sign*result)
 </script>
 <script id="ch0105/30">
   var m = Number(prompt())
