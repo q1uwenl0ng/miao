@@ -7,10 +7,9 @@
   <title>clock</title>
   <style type="text/less">
     * {
-      background-color: rgba(0, 0, 0, 0.08);
-      box-shadow: inset 0 0 1px 0px red;
+      xbackground-color: rgba(0, 0, 0, 0.08);
+      xbox-shadow: inset 0 0 1px 0px red;
     }
-
     .clock-box {
       position: relative;
       width: 560px;
@@ -38,7 +37,7 @@
       font-size: 50px;
       line-height: 50px;
       text-align: center;
-      width: 50px;
+      width: 100px;
       height: 50px;
     }
 
@@ -97,8 +96,8 @@
       left: 0;
       right: 0;
       margin: auto;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       border-radius: 99999px;
       box-sizing: border-box;
       background-color: silver;
@@ -106,8 +105,8 @@
     }
 
     .second-box,
-    .minute,
-    .hour {
+    .minute-box,
+    .hour-box {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -116,29 +115,94 @@
       margin: auto;
     }
 
+
+    .minute-box{
+      width: 15px;
+      height: 360px;
+      animation:minute-box 43200s steps(720) -35100s  infinite running;
+      transform-origin: center 180px;
+      .minute{
+        width: 15px;
+        height: 180px;
+        background-color: black;
+        border-radius:15px  15px;
+      }
+    }
+
+  @keyframes minute-box {
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(4320deg)
+  }
+  }
+
+  .hour-box{
+    width: 20px;
+    height: 280px;
+    animation:hour-box 43200s steps(60) -35100s infinite running;
+    transform-origin: center 140px;
+    .hour{
+      width: 20px;
+      height: 140px;
+      background-color: black;
+      border-radius:15px  15px;
+    }
+  }
+
+  @keyframes hour-box {
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(360deg)
+  }
+  }
     .second-box {
       width: 30px;
-      height: 350px;
-      padding-top: 30px;
-      animation: second-box 1s;
-      animation-iteration-count: 86400;
+      height: 370px;
+      padding-top: 0px;
+      animation:second-box 60s steps(60)  infinite running;
+      transform-origin: center 185px;
+      z-index: 499;
       .second {
         width: 10px;
-        height: 200px;
+        xheight: 230px;
         margin:auto;
+        animation:second 1s   infinite running;
+        transform-origin: center 185px;
           .second-top{
             height: 10px;
             width: 100%;
             background: conic-gradient(transparent 37.5%,red 0 62.5%,transparent 0  100%);
           }
           .second-bottom{
-            height: 185px;
+            height:220px;
             width: 10px;
             background-color: red;
           }
         }
     }
-
+@keyframes second-box {
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(360deg)
+  }
+  }
+@keyframes second {
+  0%{
+    transform:rotate(0deg)
+  }
+  80%{
+    transform:rotate(-1deg)
+  }
+  100%{
+    transform:rotate(0deg)
+  }
+}
   </style>
 </head>
 
@@ -165,8 +229,12 @@
         <div class="second-bottom"></div>
       </div>
     </div>
-    <div class="minute"></div>
-    <div class="hour"></div>
+    <div class="minute-box">
+      <div class="minute"></div>
+    </div>
+    <div class="hour-box">
+      <div class="hour"></div>
+    </div>
   </div>
 </body>
 <script src="less.min.js"></script>

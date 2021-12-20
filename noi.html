@@ -1192,19 +1192,19 @@
 
 
 <script id="ch0105/38">
-  var m = Number(prompt())
-  var s = String()
+  var m = Number(prompt())//一共几组数据
+  var s = ''
   for (var j = 1; j <= m; j++) {
-    var n = Number(prompt())
-    if (n == 0) {
+    var n = Number(prompt())//每组数据的最高次幂是n
+    if (n == 0) {//最高次是0次，只有常数项
       s = 0
     }
-    for (var i = n; i >= 0; i--) {
-      var a = Number(prompt())
-      if (i == 0) break;//最后一个m==0时，为常数项，导数为0，不显示
-      s = s + a * i
+    for (var i = n; i >= 0; i--) { //最高次不为0，进入循环
+      var a = Number(prompt())  //从最高次开始输入系数
+      if (i == 0) break;//最后一个i==0时，为常数项，导数为0，不显示，等输入最后一个常数后，判定成功并跳出循环
+      s = s + a * i//累加
       if (i !== 1) {
-        s = s + ' '
+        s = s + ' '//只要不是最后一项，后面都加空格
       }
     }
     console.log(s)
@@ -1267,13 +1267,42 @@
     }
     console.log(result)
   }
+  //如果只输出一次,判断是不是最后一行，加换行符\n
+
+  var h = Number(prompt())
+  var w = Number(prompt())
+  var icon = prompt()
+  var fill = Number(prompt())
+
+  var edgeline = ''
+  for (var i = 1; i <= w; i++) {
+    edgeline = edgeline + icon
+  }
+  var midline = ''
+  for (var i = 1; i <= w - 2; i++) {
+    if (fill == 1) {
+      midline = midline + icon
+    } else {
+      midline = midline + ' '
+    }
+  }
+  midline = icon + midline + icon
+  var result = edgeline + '\n'
+  for (var j = 1; j <= h - 2; j++) {
+    result = result + midline + '\n'
+  }
+  result = result + edgeline
+  console.log(result)
+
+
+
 </script>
 <script id="ch0105/43">
   var n = Number(prompt())
   for (var p = Math.trunc(n / 2); p > 2; p--) {
     var count = 0
     if (n % p == 0) {
-      for (var i = 2; i <= (p + 1) / 2; i++) {
+      for (var i = 2; i <= (p + 1) / 2; i++) {//判断p是不是质数
         if (p % i == 0) {
           count++
         }
@@ -1284,6 +1313,15 @@
       }
     }
   }
+
+  // var n = Number(prompt())
+  // for (var p = Math.trunc(n / 2); p > 2; p--) {
+  //   var count = 0
+  //   if (n % p == 0) {
+  //     console.log(p)
+  //     break
+  //   }
+  // }
 
 </script>
 <script id="ch0105/44">
@@ -1298,11 +1336,30 @@
         countx++
       }
     }
-    if (countx == 1) {
+    if (countx == 1) {   //只有一个公约数，即是除了1的本身，说明是质数
       count++
     }
   }
   console.log(i)
+
+
+  // var n = Number(prompt())
+  // var count = 0
+
+  // for (var i = 2; count < n; i++) {       //   质数从2开始算，1除去，循环结束后i++,比实际值大1，结果要减1
+  //   var iisprime = true//先假设是质数
+  //   for (var j = 2; j*j<= i; j++) {  //判断质数，即i>+2j,j最小2，即i最小4才进入循环，4之前的都不循环直接判定为质数，注意这里如果不是<=而是<,会把4当做质数,所以用j*j<=i更优化
+  //     if (i % j == 0) {
+  //       iisprime = false
+  //       break
+  //     }
+  //   }
+  //   if (iisprime == true) {
+  //     count++
+  //   }
+  // }
+  // console.log(i - 1)
+
 </script>
 <script id="ch0105/45">
   var n = Number(prompt())
