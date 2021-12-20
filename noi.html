@@ -1143,12 +1143,12 @@
 <script id="ch0105/34">
   var n = Number(prompt())
   var sum = 0
-  var i = 0
+  var i = 1
   var a = 1
-  while (i < n) {
-    i = i + 1
+  while (i <= n) {
     a = a * i
     sum = sum + a
+    i = i + 1
   }
   console.log(sum)
 </script>
@@ -1157,11 +1157,8 @@
   var a = 1
   var n = Number(prompt())
   for (var i = 1; i <= n; i = i + 1) {
-    for (var j = 1; j <= i; j = j + 1) {
-      a = a * j
-    }
+    a = a * i
     e = e + 1 / a
-    a = 1//a回复回去
   }
   console.log(e.toFixed(10))
 </script>
@@ -1171,7 +1168,7 @@
   var s = 1
   var a = 1
   for (var i = 0; i < n; i++) {
-    a = x * a
+    a = a * x
     s = s + a
   }
   console.log(s.toFixed(2))
@@ -1195,20 +1192,24 @@
 
 
 <script id="ch0105/38">
-  var n = Number(prompt())
+  var m = Number(prompt())
   var s = String()
-  if (n == 0) {
+  for (var j = 1; j <= m; j++) {
+    var n = Number(prompt())
+    if (n == 0) {
+      s = 0
+    }
+    for (var i = n; i >= 0; i--) {
+      var a = Number(prompt())
+      if (i == 0) break;//最后一个m==0时，为常数项，导数为0，不显示
+      s = s + a * i
+      if (i !== 1) {
+        s = s + ' '
+      }
+    }
+    console.log(s)
     s = 0
   }
-  for (var i = n; i >= 0; i--) {
-    var a = Number(prompt())
-    if (i == 0) break;//最后一个m==0时，为常数项，导数为0，不显示
-    s = s + a * i
-    if (i !== 1) {
-      s = s + ' '
-    }
-  }
-  console.log(s)
 
 </script>
 <script id="ch0105/39">
