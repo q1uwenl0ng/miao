@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+<script id="ch0105/38">
+  debugger
+  var n = Number(prompt())
+  var plus_minus = true
+  var s = ''
+  if (n < 0) {
+    plus_minus = false
+    n = -n
+  }
+  var N = n
+  for (var i = 1; N != 0;) {
+    var a = N % 10
+    N = (N - a) / 10
+    if (N != 0) {
+      i = i * 10
+    }
+  }
+  var m = n
+  for (; i >= 1;) {
+    s = s + Math.trunc(m / i)
+    m = m - Math.trunc(m / i) * i
+    i = i / 10
+  }
+  if (plus_minus == false) {
+    console.log('-' + s)
+  } else {
+    console.log(s)
+  }
+</script>
+<!-- <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-  <style>
+  <title>JS Bin</title> -->
+
+
+<!-- <style>
     body {
       margin: 0;
     }
@@ -26,9 +56,9 @@
       to {
         margin-left: 100%;
       }
-    }
+    } -->
 
-    div.aaaa {
+<!-- div.aaaa {
       width: 100px;
       height: 20px;
       background-color: #ff0000;
@@ -42,13 +72,13 @@
       animation-fill-mode: both;
       animation-play-state: running;
     }
-  </style>
-</head>
+  </style> -->
+<!-- </head>
 
 <body>
   <main>
     <div class="aaaa">逗你玩</div>
   </main>
-</body>
+</body> -->
 
 </html>

@@ -11,6 +11,11 @@
       box-shadow: inset 0 0 1px 0px red;
     }
 
+    .clock-box {
+      position: relative;
+      width: 560px;
+      height: 560px;
+    }
 
     ul {
       list-style-type: none;
@@ -20,60 +25,108 @@
       height: 500px;
       border-radius: 99999px;
       border: 30px double;
+      background-color: gray;
     }
 
     li {
       position: absolute;
-      font-size: 40px;
-      line-height: 100px;
-      text-align: center;
-      width: 100px;
-      height: 100px;
-    }
-
-    li.dial12 {
       top: 0;
-      left: 200px;
-    }
-
-    li.dial6 {
       bottom: 0;
-      left: 200px;
-    }
-
-    li.dial3 {
-      right: 0;
-      top: 200px;
-
-    }
-
-    li.dial9 {
       left: 0;
-      top: 200px;
+      right: 0;
+      margin: auto;
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+      width: 50px;
+      height: 50px;
     }
 
+    li:nth-of-type(1) {
+      transform: rotate(-60deg) translate(200px) rotate(60deg);
+    }
 
+    li:nth-of-type(2) {
+      transform: rotate(-30deg) translate(200px) rotate(30deg);
+    }
+
+    li:nth-of-type(3) {
+      transform: translate(200px);
+    }
+
+    li:nth-of-type(4) {
+      transform: rotate(30deg) translate(200px) rotate(-30deg);
+    }
+
+    li:nth-of-type(5) {
+      transform: rotate(60deg) translate(200px) rotate(-60deg);
+    }
+
+    li:nth-of-type(6) {
+      transform: translate(0, 200px);
+    }
+
+    li:nth-of-type(7) {
+      transform: rotate(120deg) translate(200px) rotate(-120deg);
+    }
+
+    li:nth-of-type(8) {
+      transform: rotate(150deg) translate(200px) rotate(-150deg);
+    }
+
+    li:nth-of-type(9) {
+      transform: translate(-200px);
+    }
+
+    li:nth-of-type(10) {
+      transform: rotate(-150deg) translate(200px) rotate(150deg);
+    }
+
+    li:nth-of-type(11) {
+      transform: rotate(-120deg) translate(200px) rotate(120deg);
+    }
+
+    li:nth-of-type(12) {
+      transform: translate(0, -200px)
+    }
+
+    .center {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 50px;
+      height: 50px;
+      border-radius: 99999px;
+      box-sizing: border-box;
+      background-color: silver;
     }
   </style>
 </head>
 
 <body>
   <main>
-    <div>
+    <div class="clock-box">
       <ul class="dial">
-        <li class="dial1">1</li>
-        <li class="dial2">2</li>
-        <li class="dial3">3</li>
-        <li class="dial4">4</li>
-        <li class="dial5">5</li>
-        <li class="dial6">6</li>
-        <li class="dial7">7</li>
-        <li class="dial8">8</li>
-        <li class="dial9">9</li>
-        <li class="dial10">10</li>
-        <li class="dial11">11</li>
-        <li class="dial12">12</li>
+        <li class="d1">1</li>
+        <li class="d2">2</li>
+        <li class="d3">3</li>
+        <li class="d4">4</li>
+        <li class="d5">5</li>
+        <li class="d6">6</li>
+        <li class="d7">7</li>
+        <li class="d8">8</li>
+        <li class="d9">9</li>
+        <li class="d10">10</li>
+        <li class="d11">11</li>
+        <li class="d12">12</li>
       </ul>
+      <div class="center"></div>
+      <div class="second"></div>
+      <div class="minute"></div>
+      <div class="hour"></div>
     </div>
   </main>
 </body>
