@@ -1346,9 +1346,9 @@
   // var n = Number(prompt())
   // var count = 0
 
-  // for (var i = 2; count < n; i++) {       //   质数从2开始算，1除去，循环结束后i++,比实际值大1，结果要减1
+  // for (var i = 2; count < n; i++) {       //   质数从2开始算，1除去，循环结束后i++,比实际值大1，如果输出在循环外面，结果要减1
   //   var iisprime = true//先假设是质数
-  //   for (var j = 2; j*j<= i; j++) {  //判断质数，即i>+2j,j最小2，即i最小4才进入循环，4之前的都不循环直接判定为质数，注意这里如果不是<=而是<,会把4当做质数,所以用j*j<=i更优化
+  //   for (var j = 2; j * j <= i; j++) {  //判断质数，即i>+2j,j最小2，即i最小4才进入循环，4之前的都不循环直接判定为质数，注意这里如果不是<=而是<,会把4当做质数,所以用j*j<=i更优化
   //     if (i % j == 0) {
   //       iisprime = false
   //       break
@@ -1356,9 +1356,13 @@
   //   }
   //   if (iisprime == true) {
   //     count++
+  //     if (count == n) {
+  //       console.log(i)
+  //       break
+  //     }
   //   }
   // }
-  // console.log(i - 1)
+
 
 </script>
 <script id="ch0105/45">
@@ -1385,16 +1389,40 @@
     console.log('NO')
   }
 </script>
-<script id="narcissistics">//输出10000以内的水仙花数
-  for (var i = 100; i <= 10000; i++) {
+
+<script>//函数写法  输入一个数，判断是否是水仙花数  水仙花数是指一种三位数,其各个数之立方和等于该数  立方cube
+  function cube(n) {//各个数字立方和
     var sum = 0
-    for (var j = i; j != 0;) {
-      var a = j % 10
-      j = (j - a) / 10
-      sum = a * a * a + sum
+    for (; n != 0;) {
+      var a = n % 10
+      sum += a * a * a
+      n = (n - n % 10) / 10
     }
-    if (sum == i) {
-      console.log(sum)
+    return sum
+  }
+
+
+  var n = Number(prompt())
+
+  if (cube(n) == n) {
+    console.log('YES')
+  } else {
+    console.log('NO')
+  }
+</script>
+<script id="narcissistics">//输出10000以内的水仙花数
+  function cube(n) {//各个位数字立方和
+    var sum = 0
+    for (; n != 0;) {
+      var a = n % 10
+      sum += a * a * a
+      n = (n - n % 10) / 10
+    }
+    return sum
+  }
+  for (var n = 100; n < 1000; n++) {
+    if (cube(n) == n) {
+      console.log(n)
     }
   }
 
@@ -1408,14 +1436,14 @@
   if (n == 0) {
     flag = true
   } else {
-    for (var N = n; N != 0;) {
+    for (var N = n; N != 0;) {  //先判断一共有多少位
       var a = N % 10
       N = (N - a) / 10
       if (N != 0) {
         count *= 10
       }
     }
-    for (; count >= 1;) {
+    for (; count >= 1;) {    //掐头去尾一个个成对比较
       var x = n % 10
       var y = Math.trunc(n / count)
       if (x == y) {
@@ -1441,7 +1469,7 @@
   var year = Number(prompt())
   var month = Number(prompt())
   var sum = 0
-  var leap = true
+  var leap = true//瑞年
   for (var i = 1; i < year; i++) {
     if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0) {
       sum = sum + 366
@@ -1510,7 +1538,7 @@
   if (n == 2 || n == 3) {
     prime = true
   }
-  for (var i = 2; i <= n / 2; i++) {
+  for (var i = 2; i * i <= n; i++) {
     if (n % i == 0) {
       prime = false
       break
@@ -1528,17 +1556,12 @@
 
 </script>
 <script id="primes">//输出1000以内的素数
-  var prime = false
   for (var j = 2; j <= 100; j++) {
-    if (j == 2 || j == 3) {
-      prime = true
-    }
-    for (var i = 2; i <= j / 2; i++) {
+    var prime = true//默认是true
+    for (var i = 2; i * i <= j; i++) {
       if (j % i == 0) {
         prime = false
         break  //一定要及时break 否则会继续循环，后面又会改回true了
-      } else {
-        prime = true
       }
     }
     if (prime == true) {
@@ -1550,11 +1573,10 @@
 <script id="lcf&lcm">//输入两个数，输出它们的最大公约数和最小公倍数
   var x = Number(prompt())
   var y = Number(prompt())
-  var z = x
   if (x > y) {
-    z = x
-    x = y
-    y = z
+    y = x + y
+    x = y - x
+    y = y - x               //交换顺序
   }
   for (var i = x; i >= 1; i--) {
     if (x % i == 0 && y % i == 0) {
@@ -1571,13 +1593,13 @@
 </script>
 <script id="sqrt">//输入一个数，求它的平方根，精确到小数点后3位，不能使用Math.sqrt
   var n = Number(prompt())
-  for (var i = (n + 1) / 2; i * i > n; i -= 0.001) {
+  for (var i = (n + 1) / 2; i * i > n; i -= 0.0001) {//n=4时，输出不对，结果时1.999不是2.000,所以必须减0.0001而不是0.001，防止减多了
   }
   console.log(i.toFixed(3))
 
 </script>
 <script id="itob">//itoa 给定一个整数，将其转换为字符串：不能使用String等现成函数，但可以使用非此功能的其它函数，也不能利用任意运算符的自动类型转换
-  var n = Number(prompt())
+  var n = Number(prompt())//不对啊，怎么转换
   var plus_minus = true
   var s = ''
   if (n < 0) {
@@ -1603,4 +1625,72 @@
   } else {
     console.log(s)
   }//不对啊，怎么转换
+</script>
+
+<script>//n的阶乘  函数
+  let n = Number(prompt())
+  console.log(factorrial(n))
+  function factorrial(n) {
+    let result = 1
+    if (n == 0) {
+      return 0
+    } else {
+      for (let i = 1; i <= n; i++) {
+        result *= i
+      }
+      return result
+    }
+  }
+</script>
+
+
+<script>//判定是不是素数，是的话true 不是的话false
+  let n = Number(prompt())
+  console.log(isPrime(n))
+
+  function isPrime(n) {
+    for (let i = 2; i * i <= n; i++) {
+      if (n % i == 0) {
+        return false
+      }
+    }
+    return true
+  }
+</script>
+
+<script>//一个数与m有关返回真，否则返回假，m=7
+  let m = 7
+  let n = Number(prompt())
+  console.log(qiaom(n))
+
+  function qiaom(n) {
+    if (n % m == 0) {
+      return true
+    } else {
+      for (; n != 0;) {
+        if (n % 10 == m) {
+          return true
+        } else {
+          n = (n - n % m) / 10
+        }
+      }
+      return false
+    }
+  }
+</script>
+
+<script>//斐波那契数列
+  let n = Number(prompt())
+
+  console.log(fibb(n))
+
+  function fibb(n) {
+    let a = 0
+    let b = 1
+    for (let i = 1; i <= n; i++) {
+      b = a + b
+      a = b - a
+    }
+    return a
+  }
 </script>
