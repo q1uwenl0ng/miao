@@ -72,11 +72,7 @@ var q1uwenl0ng = {
     for (var i = 0; i < array.length; i++) {
   if (typeof array[i] == 'object') {
     if (()) {
-<<<<<<< HEAD:lodash/q1uwenl0ng-lodash.js
-      ssssssssssssssssssssssssssssssss
-=======
-      sssssssssssssss
->>>>>>> miao1/master:lodash/q1uwenl0ng_lodash.js
+
     }
   }
 }
