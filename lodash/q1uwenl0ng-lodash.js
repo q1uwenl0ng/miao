@@ -24,7 +24,7 @@ var q1uwenl0ng = {
     var j = 0
     var result = []
     for (var i = 0; i < array.length; i++) {
-      if (array[i] !== false && array[i] !== null && array[i] !== 0 && array[i] !== '' && array[i] !== undefined && array[i] !== 'NaN') {
+      if (array[i] !== false && array[i] !== null && array[i] !== 0 && array[i] !== '' && array[i] !== undefined && !isNaN(array[i])) {
         result[j] = array[i]
         j++
       }
@@ -68,5 +68,18 @@ var q1uwenl0ng = {
     }
     return array
   },
+  findIndex: function (array, f, fromIndex = 0) {
+    if (typeof f == 'string') {
+      for (var i = 0; i < array.length; i++) {
+        if (typeof array[i] == 'string' && array[i] == f) {
+          return i
+        } else if (typeof array[i] == 'object') {
+
+        } else if (Array.isArray(array[i])) {
+
+        }
+      }
+    }
+  }
 
 }
