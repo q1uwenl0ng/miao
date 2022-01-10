@@ -68,13 +68,5 @@ var q1uwenl0ng = {
     }
     return array
   },
-  findIndex: function (array, predicate(), fromIndex = 0) {
-    for (var i = 0; i < array.length; i++) {
-  if (typeof array[i] == 'object') {
-    if (()) {
-
-    }
-  }
-}
-  },
+  findIndex:
 }
