@@ -68,5 +68,5 @@ var q1uwenl0ng = {
     }
     return array
   },
-  findIndex:
+
 }
