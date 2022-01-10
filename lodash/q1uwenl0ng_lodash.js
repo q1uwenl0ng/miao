@@ -72,7 +72,7 @@ var q1uwenl0ng = {
     for (var i = 0; i < array.length; i++) {
   if (typeof array[i] == 'object') {
     if (()) {
-      sss
+      sssssssss
     }
   }
 }
