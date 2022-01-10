@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<script id="ch0105/38">
+  debugger
+  var n = Number(prompt())
+  var plus_minus = true
+  var s = ''
+  if (n < 0) {
+    plus_minus = false
+    n = -n
+  }
+  var N = n
+  for (var i = 1; N != 0;) {
+    var a = N % 10
+    N = (N - a) / 10
+    if (N != 0) {
+      i = i * 10
+    }
+  }
+  var m = n
+  for (; i >= 1;) {
+    s = s + Math.trunc(m / i)
+    m = m - Math.trunc(m / i) * i
+    i = i / 10
+  }
+  if (plus_minus == false) {
+    console.log('-' + s)
+  } else {
+    console.log(s)
+  }
+</script>
+<!-- <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title> -->
+
+
+<!-- <style>
+    body {
+      margin: 0;
+    }
+
+    main {
+      background-color: #80808080;
+      height: 20px;
+      width: 100%;
+    }
+
+
+
+    @keyframes xxxx {
+      from {
+        margin-left: -100px;
+      }
+
+      to {
+        margin-left: 100%;
+      }
+    } -->
+
+<!-- div.aaaa {
+      width: 100px;
+      height: 20px;
+      background-color: #ff0000;
+      text-align: center;
+      animation-name: xxxx;
+      animation-duration: 8s;
+      animation-delay: 0s;
+      animation-timing-function: linear;
+      animation-iteration-count: 100;
+      animation-direction: normal;
+      animation-fill-mode: both;
+      animation-play-state: running;
+    }
+  </style> -->
+<!-- </head>
+
+<body>
+  <main>
+    <div class="aaaa">逗你玩</div>
+  </main>
+</body> -->
+
+</html>

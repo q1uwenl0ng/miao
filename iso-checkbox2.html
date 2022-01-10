@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>iso-checkbox.html-2</title>
+  <style>
+    label {
+      display: block;
+      width: 270px;
+      height: 156px;
+      box-sizing: border-box;
+      border: 4px solid rgb(197, 197, 197);
+      border-radius: 999px;
+      padding: 7px;
+      box-shadow: inset 0px 0px 0 0 #30F34B;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    label::after {
+      box-sizing: border-box;
+      content: "";
+      display: block;
+      width: 134px;
+      padding: 0px;
+      height: 134px;
+      border-radius: 999px;
+      box-shadow: 5px 5px 5px rgb(197, 197, 197), -5px 5px 5px rgb(197, 197, 197);
+      margin-left: 0px;
+      background-color: white;
+      padding-left: 0px;
+      transition: .3s, padding-left .3s 0.05s;
+      position: relative;
+      left: 0px;
+
+    }
+
+    input:checked+label::after {
+      left: 114px;
+      transition: .3s, width .3s 0.05s;
+      padding-left: 134px;
+      width: 0px;
+
+      box-shadow: none;
+    }
+
+
+    input:checked+label {
+      box-shadow: inset 0px 0px 0px 75px #30F34B;
+      transition: .3s;
+      border-color: #30F34B;
+    }
+  </style>
+</head>
+
+<body>
+  <div class=div1>
+    <input type="checkbox" id="checkbox1" hidden>
+    <label for="checkbox1">
+    </label>
+  </div>
+</body>
+
+</html>

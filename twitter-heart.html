@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>twitter-heart</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    /*背景图片定位 background-position: left 0>>>>left -2800px*/
+    .div1 {
+      margin: 100px auto auto auto;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .div1 section {
+      background-image: url(web_heart_animation.png);
+      background-repeat: no-repeat;
+      background-position: left 0;
+      width: 100px;
+      height: 100px;
+      xtransition: width 0.4s steps(28);
+      xborder: 2px solid pink;
+    }
+
+    .div1:hover section {
+      background-position: -2800px 0;
+      transition: 0.4s steps(28);
+    }
+
+    /*图片定位 position: left 0>>>>left -2800px*/
+    .div2 {
+      width: 100px;
+      height: 100px;
+      margin: 100px auto auto auto;
+      xborder: 1px solid pink;
+      overflow: hidden;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      xtransition: left 0.4s steps(28);
+    }
+
+    .div2:hover img {
+      left: -2800px;
+      transition: left 0.4s steps(28);
+    }
+
+    /*背景图片定位 background-position: left 0>>>>left -2800px 搭配checkbox和 label 实现点击后缓变，再点击一次后变回来*/
+    .div3 {
+      margin: 100px auto auto auto;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    label {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      background-image: url(web_heart_animation.png);
+      background-repeat: no-repeat;
+      background-position: left 0;
+      transition: 0.4s steps(28);
+    }
+
+    #heart1:checked+label {
+      background-position: -2800px;
+      transition: 0.4s steps(28);
+    }
+
+    /*背景图片定位 background-position:right 0;width:2900px; 搭配checkbox和 label 实现点击后缓变，再点击一次后变回来
+    这个是自己做作业的实现方法，用背景图片定位，设置包含块width由2900px>>>>>>100px变化,思考回路有点绕了，不如上面几种*/
+    .div4 {
+      margin: 100px auto auto auto;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #label2 {
+      display: inline-block;
+      height: 100px;
+      width: 2900px;
+      background-image: url(web_heart_animation.png);
+      background-repeat: no-repeat;
+      background-position: right 0;
+      transition: 0.4s steps(28);
+    }
+
+    #heart2:checked+label {
+      width: 100px;
+      transition: 0.4s steps(28);
+    }
+  </style>
+</head>
+
+<body>
+  <div class=div1>
+    <section></section>>
+  </div>
+
+  <div class=div2>
+    <img src="web_heart_animation.png" alt="heart">
+  </div>
+
+  <div class=div3>
+    <input type="checkbox" id='heart1' hidden>
+    <label for="heart1" id='label1'></label>
+  </div>
+
+  <div class=div4>
+    <input type="checkbox" id='heart2' hidden>
+    <label for="heart2" id='label2'></label>
+  </div>
+</body>
+
+</html>

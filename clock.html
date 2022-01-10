@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>clock</title>
+  <style type="text/less">
+    * {
+      xbackground-color: rgba(0, 0, 0, 0.08);
+      xbox-shadow: inset 0 0 1px 0px red;
+    }
+    .clock-box {
+      position: relative;
+      width: 560px;
+      height: 560px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border-radius: 99999px;
+      border: 30px double;
+      background-color: gray;
+    }
+
+    li {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+      width: 100px;
+      height: 50px;
+    }
+
+    li:nth-of-type(1) {
+      transform: rotate(-60deg) translate(200px) rotate(60deg);
+    }
+
+    li:nth-of-type(2) {
+      transform: rotate(-30deg) translate(200px) rotate(30deg);
+    }
+
+    li:nth-of-type(3) {
+      transform: translate(200px);
+    }
+
+    li:nth-of-type(4) {
+      transform: rotate(30deg) translate(200px) rotate(-30deg);
+    }
+
+    li:nth-of-type(5) {
+      transform: rotate(60deg) translate(200px) rotate(-60deg);
+    }
+
+    li:nth-of-type(6) {
+      transform: translate(0, 200px);
+    }
+
+    li:nth-of-type(7) {
+      transform: rotate(120deg) translate(200px) rotate(-120deg);
+    }
+
+    li:nth-of-type(8) {
+      transform: rotate(150deg) translate(200px) rotate(-150deg);
+    }
+
+    li:nth-of-type(9) {
+      transform: translate(-200px);
+    }
+
+    li:nth-of-type(10) {
+      transform: rotate(-150deg) translate(200px) rotate(150deg);
+    }
+
+    li:nth-of-type(11) {
+      transform: rotate(-120deg) translate(200px) rotate(120deg);
+    }
+
+    li:nth-of-type(12) {
+      transform: translate(0, -200px)
+    }
+
+    .center {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 40px;
+      height: 40px;
+      border-radius: 99999px;
+      box-sizing: border-box;
+      background-color: silver;
+      z-index: 500;
+    }
+
+    .second-box,
+    .minute-box,
+    .hour-box {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+
+    .minute-box{
+      width: 15px;
+      height: 360px;
+      animation:minute-box 43200s steps(720) -35100s  infinite running;
+      transform-origin: center 180px;
+      .minute{
+        width: 15px;
+        height: 180px;
+        background-color: black;
+        border-radius:15px  15px;
+      }
+    }
+
+  @keyframes minute-box {
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(4320deg)
+  }
+  }
+
+  .hour-box{
+    width: 20px;
+    height: 280px;
+    animation:hour-box 43200s steps(60) -35100s infinite running;
+    transform-origin: center 140px;
+    .hour{
+      width: 20px;
+      height: 140px;
+      background-color: black;
+      border-radius:15px  15px;
+    }
+  }
+
+  @keyframes hour-box {
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(360deg)
+  }
+  }
+    .second-box {
+      width: 30px;
+      height: 370px;
+      padding-top: 0px;
+      animation:second-box 60s steps(60)  infinite running;
+      transform-origin: center 185px;
+      z-index: 499;
+      .second {
+        width: 10px;
+        xheight: 230px;
+        margin:auto;
+        animation:second 1s   infinite running;
+        transform-origin: center 185px;
+          .second-top{
+            height: 10px;
+            width: 100%;
+            background: conic-gradient(transparent 37.5%,red 0 62.5%,transparent 0  100%);
+          }
+          .second-bottom{
+            height:220px;
+            width: 10px;
+            background-color: red;
+          }
+        }
+    }
+@keyframes second-box {
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(360deg)
+  }
+  }
+@keyframes second {
+  0%{
+    transform:rotate(0deg)
+  }
+  80%{
+    transform:rotate(-1deg)
+  }
+  100%{
+    transform:rotate(0deg)
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div class="clock-box">
+    <ul class="dial">
+      <li class="d1">1</li>
+      <li class="d2">2</li>
+      <li class="d3">3</li>
+      <li class="d4">4</li>
+      <li class="d5">5</li>
+      <li class="d6">6</li>
+      <li class="d7">7</li>
+      <li class="d8">8</li>
+      <li class="d9">9</li>
+      <li class="d10">10</li>
+      <li class="d11">11</li>
+      <li class="d12">12</li>
+    </ul>
+    <div class="center"></div>
+    <div class="second-box">
+      <div class="second">
+        <div class="second-top"></div>
+        <div class="second-bottom"></div>
+      </div>
+    </div>
+    <div class="minute-box">
+      <div class="minute"></div>
+    </div>
+    <div class="hour-box">
+      <div class="hour"></div>
+    </div>
+  </div>
+</body>
+<script src="less.min.js"></script>
+
+</html>

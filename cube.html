@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>cube</title>
+  <style type="text/less">
+    * {
+  xbackground-color: rgba(0, 0, 0, 0.08);
+  xbox-shadow: inset 0 0 1px 0px red;
+}
+
+body{
+  margin: 0;
+  overflow:hidden;
+}
+html,
+body{
+  height: 100%;
+}
+@keyframes cube{
+  from{
+    transform: rotatex(0)  rotatey(0)  rotatez(0);
+
+  }
+
+  to{
+    transform: rotatex(3600deg)  rotatey(3600deg)  rotatez(3600deg);
+  }
+}
+main{
+  margin:auto;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width: 800px;
+  height: 800px;
+  transform-style:preserve-3d;
+  xbackface-visibility:hidden;
+  animation-name: cube;
+  animation-duration: 60s;
+animation-delay: 0s;
+animation-timing-function: ease;
+animation-iteration-count: 100;
+animation-direction: alternate;
+animation-fill-mode: both;
+  animation-play-state: running;
+  xbackface-visibility: hidden;
+}
+
+
+
+div{
+  width: 200px;
+  height: 200px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin:auto;
+  line-height: 200px;
+  text-align: center;
+  font-size: 40px;
+
+}
+
+.back{
+transform: translate(-50%,-50%)  translatez(-100px) ;
+background-image: linear-gradient(to right top, #00ff0080,#0000ff80);
+
+background-image: linear-gradient(to right bottom, #00ffff80,#00000080);
+}
+.front{
+transform:translate(-50%,-50%) translatez(100px);
+background-image: linear-gradient(to right top, #ff000080,#ffffff80);
+background-image: linear-gradient(to right bottom, #ff00ff80,#ffff0080);
+ }
+
+
+.top{
+transform:translate(-50%,-50%) translatey(-100px) rotatex(90deg);
+background-image: linear-gradient(to right top,#ff00ff80,#00ffff80);
+background-image: linear-gradient(to right bottom, #0000ff80,#ffffff80);
+}
+
+
+.left{
+  transform:translate(-50%,-50%) translate(-50%) rotatey(90deg);
+  background-image: linear-gradient(to right top, #00000080,#ff00ff80);
+  background-image: linear-gradient(to right bottom, #0000ff80,#ff000080);
+}
+
+.right{
+  transform:translate(-50%,-50%) translate(50%) rotatey(90deg);
+background-image: linear-gradient(to right top, #ffff0080,#00ffff80);
+background-image: linear-gradient(to right bottom, #ffffff80,#00ff0080);
+}
+
+.bottom{
+transform:translate(-50%,-50%) translatey(100px) rotatex(270deg);
+background-image: linear-gradient(to right top, #00000080,#ffff0080);
+background-image: linear-gradient(to right bottom, #ff000080,#00ff0080);
+}
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="front"></div>
+    <div class="back"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="top"></div>
+    <div class="bottom "></div>
+  </main>
+</body>
+<script src="./less.min.js"></script>
+
+</html>
