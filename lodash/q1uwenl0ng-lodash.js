@@ -24,14 +24,14 @@ var q1uwenl0ng = {
     var j = 0
     var result = []
     for (var i = 0; i < array.length; i++) {
-      if (array[i] !== false && array[i] !== null && array[i] !== 0 && array[i] !== '' && array[i] !== undefined && !isNaN(array[i])) {
+      if (array[i] !== false && array[i] !== null && array[i] !== 0 && array[i] !== '' && array[i] !== undefined && !Number.isNaN(array[i])) {
         result[j] = array[i]
         j++
       }
     }
     return result
   },
-  drop: function (ary, n = 1) {//drop  数组从左开始丢弃n项 Creates a slice of array with n elements dropped from the beginning.
+  drop: function (ary, n = 1) {//drop  数组从左开始丢弃n项
     var l = ary.length
     if (l < 1) {
       return ary
@@ -80,6 +80,49 @@ var q1uwenl0ng = {
         }
       }
     }
-  }
+  },
+  flatten: function (array) {//铺平一层深度
+    var result = []
+    for (var i = 0; i < array.length; i++) {
+      if (!Array.isArray(array[i])) {
+        result.push(array[i])
+      } else {
+        for (var j = 0; j < array[i].length; j++) {
+          result.push(array[i][j])
+        }
+      }
+    }
+    return result
+  },
+  flattenDeep: function (array) {//铺平所有深度
+    var result = []
+    result = flattenDeepX(array)
+    function flattenDeepX(array) {
+      for (var i = 0; i < array.length; i++) {
+        if (!Array.isArray(array[i])) {
+          result.push(array[i])
+        } else {
+          flattenDeepX(array[i])
+        }
+      }
+      return result
+    }
+    return result
+  },
+  flattenDepth: function (array, depth = 1) {
+    var result = []
+    result = flattenDepthX(array, depth)
+    function flattenDepthX(array, depth) {
+      for (var i = 0; i < array.length; i++) {
+        if (!Array.isArray(array[i]) || depth == 0) {
+          result.push(array[i])
+        } else {
+          flattenDepthX(array[i], --depth)
+        }
+      }
+      return result
+    }
+    return result
+  },
 
 }
