@@ -134,4 +134,9 @@ var q1uwenl0ng = {
       return func(...args.slice(0, 1))
     }
   },
+  negate: function (f) {
+    return function (...args) {
+      return !f(...args)
+    }
+  },
 }
