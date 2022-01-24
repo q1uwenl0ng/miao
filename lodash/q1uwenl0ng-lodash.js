@@ -139,4 +139,9 @@ var q1uwenl0ng = {
       return !f(...args)
     }
   },
+  spread: function (f) {
+    return function (args) {
+      return f.apply(this, args)
+    }
+  },
 }
