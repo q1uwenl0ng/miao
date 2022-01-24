@@ -124,5 +124,14 @@ var q1uwenl0ng = {
     }
     return result
   },
-
+  ary: function (func, n = args.length) {
+    return function (...args) {
+      return func(...args.slice(0, n))
+    }
+  },
+  unary: function (func) {
+    return function (...args) {
+      return func(...args.slice(0, 1))
+    }
+  },
 }
