@@ -141,7 +141,23 @@ var q1uwenl0ng = {
   },
   spread: function (f) {
     return function (args) {
-      return f.apply(this, args)
+      return f.apply(null, args)
+    }
+  },
+  flip: function (f) {
+    return function (...args) {
+      return f(...args.reverse())
+    }
+  },
+  before: function (n, func) {
+    var c = 0
+    var result
+    return function (...args) {
+      if (c < n) {
+        result = func(...args)
+        c++
+      }
+      return result
     }
   },
 }
